@@ -1,0 +1,20 @@
+.btn-container{
+height: 3rem;
+/* background-color: antiquewhite; */
+display: flex;
+align-items: center;
+}
+
+.download-btn{
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #efef;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+.download-btn:hover{
+    background-color:black ;
+    color: #efef;
+transition: 0.5s;
+}
