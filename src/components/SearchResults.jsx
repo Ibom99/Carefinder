@@ -2,7 +2,7 @@ import React from 'react'
 import "./SearchResults.css"
 
 const SearchResults = ({result}) => {
-  return (
+  return ( 
     <div className='search-result' onClick={(e) => alert(`you clicked on ${ result.name }`)}>
       <p>{result.name}</p>
       <p>{result.location}</p>

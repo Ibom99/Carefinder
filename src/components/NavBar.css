@@ -1,5 +1,6 @@
 .nav-container{
-    background-color: aqua;
+    background: rgb(52,41,241);
+    background: linear-gradient(90deg, rgba(52,41,241,1) 0%, rgba(77,77,252,1) 48%, rgba(136,174,255,1) 100%);
     width: 80%;
     height:4rem;
     margin: 0 auto;
@@ -7,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 0 0 10px 10px;
+    color: white;
 
 }
 
@@ -16,31 +18,54 @@
 .logo{
     margin: 0rem 0rem 0rem 1rem;
     padding:8px 18px;
+    font-weight:bold;
 }
 
 .menu li{
     margin: 0rem 1rem;
     padding: 8px 18px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     list-style: none;
+    background-image: linear-gradient(#000 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
 }
 
 .menu li:hover{
-    background-color: azure;
+    /* border-bottom: 1px solid rgb(26, 26, 85); */
     cursor: pointer;
+    /* border-radius: none; */
+    background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+
 }
 
 .icon{
     /* margin: 0rem 1rem; */
     display: none;
-    transition: 0.2s;
+    color: white;
+
+}
+
+.icon:hover{
+    cursor: pointer;
 }
 .m-menu{
-background-color: aliceblue;
+background-color: white;
+box-shadow: 0px 0px 8px #ddd;
 width: 208px;
-height: 100vh;
+height: 65vh;
 position: absolute;
 display: none;
+left: -208px;
+-webkit-animation: slide 0.5s forwards;
+-webkit-animation-delay: 0.3s;
+animation: slide 0.5s forwards;
+animation-delay: 0.3s;
 }
 .m-feature{
     text-align: center;
@@ -59,14 +84,28 @@ padding: 1rem;
     margin-bottom: 0.5rem;
     text-decoration: none;
     list-style: none;
+    background: linear-gradient(#1095c1 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+    transition: 0.4s, background-position 0s;
 }
 .m-menu li:hover{
+    --p: 100%;
+    color: #fff;
 cursor: pointer;
 background-color: steelblue;
-transition: 0.4s;
-color: white;
+
 }
 
+/* animation on navigation */
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+/* mobile view */
 
 @media only screen and (max-width: 1100px) {
   
@@ -80,7 +119,7 @@ color: white;
     }
     .m-menu.expanded{
         display: block;
-        transition: 0.5s;
+        
     }
     .m-menu{
         display: none;
@@ -91,5 +130,10 @@ color: white;
         display: block;
         margin: 0rem 0rem 0rem 1rem;
     padding: 0.5rem 0rem 0rem 0.5rem;
+   
     }
 }
+
+
+
+

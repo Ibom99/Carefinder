@@ -6,7 +6,7 @@ import "./Download.css"
 const Download = ({results}) => {
   return (
     <div className='btn-container'>
-      <CSVLink data={results} filename={"carefinder-hospital-list.csv"}><button className='download-btn'>Download Hospital List</button></CSVLink>
+      <CSVLink data={results} filename={"carefinder-hospital-list.csv"}><button className='download-btn'>Download<br></br> <span> Hospital List</span></button></CSVLink>
     </div>
   )
 }
