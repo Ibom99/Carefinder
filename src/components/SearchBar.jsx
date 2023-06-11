@@ -15,7 +15,10 @@ const SearchBar = ({setResults}) => {
             return value && data && data.name && data.name.toLowerCase().includes(value)
         })
         setResults(results)
-    });
+      })
+      .catch(error => {
+        console.error(error)
+      });
   };
 
   const handleChange = (value) => {

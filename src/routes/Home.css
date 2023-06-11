@@ -60,7 +60,7 @@
 
 @media only screen and (max-width: 1100px){
     .website-title h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .home-container{
         width: 100vw;
@@ -76,7 +76,7 @@
     }
     .search-bar-container{
         margin: 0 auto;
-        width: 70vw;
+        width: 80vw;
         padding-top: 5vh;
     }
     .list{

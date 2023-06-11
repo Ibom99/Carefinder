@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 import { FaHamburger } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
 import { MdOutlineHealthAndSafety } from "react-icons/md";
@@ -23,10 +24,11 @@ const NavBar = () => {
           <div className="m-feature">
         <p>CareFinder</p>
           </div>
-          <li>Home</li>
-          <li>Hospitals A-Z</li>
+          <Link to="/" className="home-link" ><li>Home</li></Link>
+          <Link to="/AtoZ" className="list-link" ><li>Hospitals A-Z</li></Link>
           <li>BMI Calculator</li>
           <li>About Us</li>
+          {/* <Link to="/SignIn" className="signin-link"><li>Sign In</li></Link> */}
         </ul>
       </div>
 
@@ -35,10 +37,12 @@ const NavBar = () => {
           <p>Carefinder</p>
         </div>
         <ul className="menu">
-          <li>Home</li>
-          <li>Hospitals A-Z</li>
+        <Link to="/" className="home-link" ><li>Home</li></Link>
+        <Link to="/AtoZ" className="list-link" ><li>Hospitals A-Z</li></Link>
           <li>BMI Calculator</li>
           <li>About Us</li>
+          <Link to="/SignIn" className="signin-link"><li>Sign In</li></Link>
+          <Link to="/SignUp" className="signup-link"><li>Sign Up</li></Link>
         </ul>
       </div>
     </div>

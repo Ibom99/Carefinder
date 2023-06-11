@@ -28,3 +28,9 @@
   #search-icon{
     color: royalblue;
   }
+
+  @media only screen and (max-width: 1100px){
+    input{
+      font-size: 0.7rem;
+    }
+  }
