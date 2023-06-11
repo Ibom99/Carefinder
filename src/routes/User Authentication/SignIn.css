@@ -1,0 +1,44 @@
+
+.signin-content{
+    display: flex;
+    /* margin: 0 auto; */
+    background-color: antiquewhite;
+    max-width: 100vw;
+/* margin-top: 3rem; */
+height: 100vh;
+}
+.carefinder-image{
+    background-image: url(https://res.cloudinary.com/dzzohccd8/image/upload/v1686494463/DEV%20Images/istockphoto-1447352591-612x612_aw61hv.jpg);
+    background-size: cover;
+    width: 50vw;
+}
+.signin-desc{
+    background-color: aliceblue;
+    
+    width: 30rem;
+    margin: 0 auto;
+    margin-top: 20vh;
+    height: 60vh;
+}
+.carefinder-title{
+    font-size: 5rem;
+}
+.signin-form{
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.signin-form form{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    background-color: azure;
+    
+    
+    /* flex-direction: column; */
+}
+.auth-email{
+    background-color: aquamarine;
+    padding: 10px;
+}

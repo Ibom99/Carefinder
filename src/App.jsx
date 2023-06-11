@@ -1,12 +1,14 @@
 // import React, { useState } from "react";
 import { Routes, Route, } from "react-router-dom"
-
+import {ROUTES} from './utils/constants'
 import "./App.css";
 import Home from "./routes/Home";
 import Az from "./routes/Az";
-import SignIn from "./components/User Authentication/SignIn";
-import SignUp from "./components/User Authentication/SignUp";
-import Dashboard from "./components/User Authentication/Dashboard";
+import SignIn from "./routes/User Authentication/SignIn";
+import SignUp from "./routes/User Authentication/SignUp";
+import Dashboard from "./routes/User Authentication/Dashboard";
+import AuthRoute from "./router/AuthRoute";
+import UnAuthRoute from "./router/UnAuthRoute";
 
 
 function App() {
@@ -15,11 +17,12 @@ function App() {
   return (
     <div className="App">
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/AtoZ" element={<Az />} />
-      <Route path="/SignIn" element={ <SignIn />} />
-      <Route path="/SignUp" element={ <SignUp />} />
-      <Route path="/Dashboard" element={<Dashboard/> } />
+      <Route path={ROUTES.LANDING} element={ <UnAuthRoute> <Home /></UnAuthRoute>} />
+      <Route path={ROUTES.A_TO_Z} element={<UnAuthRoute> <Az /></UnAuthRoute>} />
+      <Route path={ROUTES.SIGN_IN} element={<UnAuthRoute> <SignIn /></UnAuthRoute>} />
+      <Route path={ROUTES.SIGN_UP} element={ <UnAuthRoute> <SignUp /></UnAuthRoute>} />
+      
+      <Route path={ROUTES.DASHBOARD} element={<AuthRoute><Dashboard/> </AuthRoute>} />
       </Routes>
     </div>
   );

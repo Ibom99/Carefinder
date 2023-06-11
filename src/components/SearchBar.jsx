@@ -30,6 +30,7 @@ const SearchBar = ({setResults}) => {
     <div className="input-wrapper">
       <FaSearch id="search-icon" />
       <input
+      className="search-input"
         placeholder="Search by name, state or location..."
         value={input}
         onChange={(e) => handleChange(e.target.value)}
