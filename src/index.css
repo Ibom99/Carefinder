@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 body{
   overflow-x: hidden;
+
 }

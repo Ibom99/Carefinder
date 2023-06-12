@@ -50,6 +50,7 @@ const SignUp = () => {
 
 
       <form onSubmit={signUp}>
+      <h1 className='carefinder-logo' ><Link className='carefinder-link' to={ROUTES.LANDING}>Carefinder</Link></h1>
         <h1 className='signup-title'>
             Create an account
         </h1>

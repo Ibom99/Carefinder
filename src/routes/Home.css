@@ -29,6 +29,7 @@
 .search-description{
     margin-bottom: 1rem;
     color: white;
+    font-size: 20px;
 }
 .list{
     display: flex;

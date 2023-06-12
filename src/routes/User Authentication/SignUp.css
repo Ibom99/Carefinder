@@ -33,11 +33,11 @@ height: 100vh;
     color: black;
 }
 .signup-title{
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 .signup-form{
     display: flex;
-    padding: 6rem;
+    padding: 4rem;
     flex-direction: column;
     margin: 0 auto;
 }

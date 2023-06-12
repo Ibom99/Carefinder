@@ -62,6 +62,7 @@ const SignIn = () => {
 </div>
 <div className='signin-form'>
 <form onSubmit={signIn}>
+  <h1 className='carefinder-logo' ><Link className='carefinder-link' to={ROUTES.LANDING}>Carefinder</Link></h1>
   <h1 className='login-title'>
       Hey, hello <i className='waving-icon'><MdOutlineWavingHand /> </i> 
   </h1>

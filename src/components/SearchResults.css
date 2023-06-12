@@ -3,8 +3,14 @@
 }
 
 .search-result:hover{
-    background-color: rgba(52,41,241,1);
+    background-color: #E3F2FD;
     cursor: pointer;
-    color: white;
+    /* color: white; */
     transition: 0.4s;
+}
+.result-name{
+    font-weight: 600;
+}
+.result-address{
+    color: rgb(130, 130, 130);
 }

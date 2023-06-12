@@ -38,6 +38,7 @@
 
 .menu li{
     margin: 0rem 1rem;
+    font-weight: bold;
     padding: 8px 18px;
     /* border-radius: 30px; */
     list-style: none;

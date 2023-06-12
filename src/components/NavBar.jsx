@@ -36,10 +36,10 @@ const NavBar = () => {
 
       <div className="nav-container">
         <div className="logo">
-          <p>Carefinder</p>
+          <Link to={ROUTES.LANDING} className="home-link" ><p>Carefinder</p></Link>
         </div>
         <ul className="menu">
-        <li><Link to={ROUTES.LANDING} className="home-link" >Home</Link></li>
+        {/* <li><Link to={ROUTES.LANDING} className="home-link" >Home</Link></li> */}
         <li><Link to={ROUTES.A_TO_Z} className="list-link" >Hospitals A-Z</Link></li>
           
           <li>About Us</li>

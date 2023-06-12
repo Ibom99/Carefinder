@@ -31,7 +31,7 @@ const Home = () => {
 
           <SearchResultsList results={results} />
 
-          <div className="faq">
+          {/* <div className="faq">
             <h2 className="faq-title">FAQ</h2>
             <p className="question">
               <b>Q.</b> Are the addresses of the hospitals available?
@@ -51,7 +51,7 @@ const Home = () => {
             <p className="answer">
               <b>A.</b> <em>No, just hospitals in Nigeria.</em>
             </p>
-          </div>
+          </div> */}
         </div>
 
         <img
