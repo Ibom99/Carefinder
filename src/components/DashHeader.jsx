@@ -3,6 +3,8 @@ import "./DashHeader.css"
 import { useEffect, useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase'
+import { ROUTES } from '../utils/constants'
+import { Link } from 'react-router-dom'
 
 const DashHeader = () => {
     const [authUser, setAuthUser] = useState(null)
@@ -26,7 +28,7 @@ listen()
   return (
     <div className='dash-header-container'>
         <div className='dash-header-content'>
-        <p>Dashboard</p>
+       <Link className='header-title' to={ROUTES.DASHBOARD}> <p >Dashboard</p></Link>
       <div className='auth-state'>{ authUser ? <> <span>{`Welcome! ${authUser.email}`}</span> </> : <p>Signed Out</p>}</div>
         </div>
       

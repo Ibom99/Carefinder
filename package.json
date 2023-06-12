@@ -1,7 +1,7 @@
 {
   "name": "carefinder",
   "private": true,
-  "proxy": "https://carefinder-6ad95.web.app/",
+  "proxy": "https://carefinder-app-6e91d.web.app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -29,12 +29,13 @@ const DashNav = () => {
       <div className='dash-nav-content'>
         <h1 className='dash-title'>Carefinder</h1>
 <ul className='dash-nav'>
-    <li>
+    {/* <li>
         <Link to={ROUTES.LANDING}>Home</Link>
 
-    </li>
+    </li> */}
+     <Link to={ROUTES.BMI}><li>BMI Calculator</li></Link>
+
     <li>Resources</li>
-    <li>Education</li>
 </ul>
 <div className='signout-btn'>
 

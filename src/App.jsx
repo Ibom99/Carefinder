@@ -9,6 +9,7 @@ import SignUp from "./routes/User Authentication/SignUp";
 import Dashboard from "./routes/User Authentication/Dashboard";
 import AuthRoute from "./router/AuthRoute";
 import UnAuthRoute from "./router/UnAuthRoute";
+import BMICalculator from "./routes/BMICalculator";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path={ROUTES.SIGN_UP} element={ <UnAuthRoute> <SignUp /></UnAuthRoute>} />
       
       <Route path={ROUTES.DASHBOARD} element={<AuthRoute><Dashboard/> </AuthRoute>} />
+      <Route path={ROUTES.BMI} element={<AuthRoute><BMICalculator /></AuthRoute>} />
       </Routes>
     </div>
   );

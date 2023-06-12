@@ -2,16 +2,18 @@
     width: 30vw;
     height: 100vh;
     background-color:#E3F2FD;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .dash-user-content{
 margin: 10px;
 background-color: white;
 padding: 2rem;
+height: 96.5%;
 }
 .user-title{
-
+margin-bottom: 1rem;
 }
+
 
 .bio-grid{
     margin-top: 2rem;
@@ -24,9 +26,10 @@ padding: 2rem;
     row-gap: 10px;
     column-gap: 10px;
 }
+
 .age-tile{
     background-color: azure;
-    height: 5rem;
+    height: 13rem;
     grid-area: age-tile;
 }
 .gender-tile{

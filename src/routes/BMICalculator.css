@@ -1,0 +1,8 @@
+.bmi-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.bmi-content{
+    width: 40vw;
+}
