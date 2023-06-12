@@ -1,0 +1,13 @@
+.dash-header-container{
+    width: 10vw;
+    height: 100vh;
+    background-color:#E3F2FD ;
+    border: 1px solid black;
+}
+.dash-header-content{
+    margin: 10px;
+    background-color: antiquewhite;
+}
+.auth-state{
+    font-size: 0.8rem;
+}

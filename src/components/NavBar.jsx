@@ -9,6 +9,7 @@ import { ROUTES } from "../utils/constants";
 
 const NavBar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  
 
   return (
     <div className="container">
@@ -39,11 +40,11 @@ const NavBar = () => {
         </div>
         <ul className="menu">
         <li><Link to={ROUTES.LANDING} className="home-link" >Home</Link></li>
-        <Link to={ROUTES.A_TO_Z} className="list-link" ><li>Hospitals A-Z</li></Link>
+        <li><Link to={ROUTES.A_TO_Z} className="list-link" >Hospitals A-Z</Link></li>
           <li>BMI Calculator</li>
           <li>About Us</li>
-          <Link to={ROUTES.SIGN_IN} className="signin-link"><li>Sign In</li></Link>
-          <Link to={ROUTES.SIGN_UP} className="signup-link"><li>Sign Up</li></Link>
+          <li><Link to={ROUTES.SIGN_IN} className="signin-link">Sign In</Link></li>
+          <li><Link to={ROUTES.SIGN_UP} className="signup-link">Sign Up</Link></li>
         </ul>
       </div>
     </div>

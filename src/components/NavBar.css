@@ -19,6 +19,14 @@
     text-decoration: none;
     color: white;
 }
+.signin-link{
+    text-decoration: none;
+    color: white; 
+}
+.signup-link{
+    text-decoration: none;
+    color: white;
+}
 .menu{
     display: flex;
 }
@@ -46,6 +54,7 @@
     border-bottom: 3px solid rgb(26, 26, 85);
     padding-bottom: 10px;
     cursor: pointer;
+    /* font-weight: bold; */
     /* border-radius: none; */
     /* background-position: 100% 100%; OR bottom right */
   /* background-size: 100% 2px; */

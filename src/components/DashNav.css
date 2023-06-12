@@ -1,0 +1,61 @@
+.dash-nav-container{
+    width: 20vw;  
+    height: 100vh;
+    background-color:#E3F2FD ;
+}
+.dash-title{
+padding: 2rem;
+}
+.dash-nav-content{
+    margin: 10px;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dash-nav{
+    padding-top: 3rem;
+    width: 80%;
+    
+}
+.dash-nav li{
+    /* background-color: #0D47A1; */
+    padding: 10px;
+margin-bottom: 10px;
+text-align: center;
+list-style: none;
+color: black;
+border-radius: 5px;
+/* text-decoration: none; */
+}
+.dash-nav li:hover{
+    background-color: #BBDEFB;
+    /* color: black; */
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.signout-btn{
+    margin-top: 15rem;
+    display: flex;
+   
+    align-items:  center;
+    /* background-color: bisque; */
+}
+.logout-icon{
+    font-size: 1rem;
+}
+.btn-signout{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #BBDEFB;
+    color: black;
+    margin-bottom: 1.5rem;
+}
+.btn-signout:hover{
+ color: white;
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: #0D47A1;
+}

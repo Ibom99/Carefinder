@@ -1,0 +1,39 @@
+.dash-user-container{
+    width: 30vw;
+    height: 100vh;
+    background-color:#E3F2FD;
+    border: 1px solid black;
+}
+.dash-user-content{
+margin: 10px;
+background-color: white;
+padding: 2rem;
+}
+.user-title{
+
+}
+
+.bio-grid{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "age-tile gender-tile"
+    "blood-tile blood-tile";
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.age-tile{
+    background-color: azure;
+    height: 5rem;
+    grid-area: age-tile;
+}
+.gender-tile{
+    background-color: beige;
+    grid-area: gender-tile;
+}
+.blood-tile{
+    background-color: bisque;
+    grid-area: blood-tile;
+}
