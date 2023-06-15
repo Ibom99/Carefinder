@@ -3,7 +3,7 @@ import { Routes, Route, } from "react-router-dom"
 import {ROUTES} from './utils/constants'
 import "./App.css";
 import Home from "./routes/Home";
-import Az from "./routes/Az";
+import Reviews from "./routes/Reviews";
 import SignIn from "./routes/User Authentication/SignIn";
 import SignUp from "./routes/User Authentication/SignUp";
 import Dashboard from "./routes/User Authentication/Dashboard";
@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <Routes>
       <Route path={ROUTES.LANDING} element={ <UnAuthRoute> <Home /></UnAuthRoute>} />
-      <Route path={ROUTES.A_TO_Z} element={<UnAuthRoute> <Az /></UnAuthRoute>} />
+      <Route path={ROUTES.REVIEWS} element={<UnAuthRoute> <Reviews /></UnAuthRoute>} />
       <Route path={ROUTES.SIGN_IN} element={<UnAuthRoute> <SignIn /></UnAuthRoute>} />
       <Route path={ROUTES.SIGN_UP} element={ <UnAuthRoute> <SignUp /></UnAuthRoute>} />
       

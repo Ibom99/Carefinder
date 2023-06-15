@@ -1,6 +1,6 @@
 export const ROUTES = {
   LANDING: '/',
-  A_TO_Z: '/list_of_hospitals',
+  REVIEWS: '/reviews',
   SIGN_IN: '/signin',
   SIGN_UP: '/register',
   DASHBOARD: '/dashboard',

@@ -32,6 +32,7 @@ height: 100vh;
 }
 .carefinder-link{
     font-family: 'Kaushan Script', cursive;
+    font-size: 1.8rem;
 }
 .search{
     color: black;
@@ -105,5 +106,13 @@ height: 100vh;
 @media only screen and (max-width: 1100px){
     .carefinder-image{
         display: none;
+    }
+    .signup-form{
+        padding: 0rem;
+        margin-top: 3rem;
+        
+    }
+    .signup-title{
+        font-size: 1.5rem;
     }
 }

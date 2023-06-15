@@ -22,13 +22,15 @@ const NavBar = () => {
         >
           {isNavExpanded ? <FaRegWindowClose /> : <FaHamburger />}
         </i>
+        <p className="m-logo">Carefinder</p>
         <ul className={isNavExpanded ? "m-menu expanded" : "m-menu"}>
           <div className="m-feature">
         <Link className="home" to={ROUTES.LANDING}><p>CareFinder</p></Link>
           </div>
           <Link to={ROUTES.BMI} className="BMI-link" ><li>BMI Calculator</li></Link>
-          <Link to={ROUTES.A_TO_Z} className="list-link" ><li>Hospitals A-Z</li></Link>
+          <Link to={ROUTES.REVIEWS} className="list-link" ><li>Reviews</li></Link>
           <li>About Us</li>
+          <li>FAQ</li>
             <Link to={ROUTES.SIGN_IN} className="signin-m"><li>Sign In</li></Link>
           <Link to={ROUTES.SIGN_UP} className="signup-m"><li>Sign Up</li></Link>
       
@@ -43,7 +45,7 @@ const NavBar = () => {
         </div>
         <ul className="menu">
         <li><Link to={ROUTES.BMI} className="home-link" >BMI Calculator</Link></li>
-        <li><Link to={ROUTES.A_TO_Z} className="atoz-link" >Hospitals A-Z</Link></li>
+        <li><Link to={ROUTES.REVIEWS} className="atoz-link" >Reviews</Link></li>
           
           <li>About Us</li>
           <li><Link to={ROUTES.SIGN_IN} className="signin-link">Sign In</Link></li>

@@ -36,7 +36,7 @@ const DashNav = () => {
      <li>Drop a review</li>
      <li>Add New Hospital</li>
 
-    <li>Resources</li>
+    <li>User Feedback</li>
 </ul>
 <div className='signout-btn'>
 
