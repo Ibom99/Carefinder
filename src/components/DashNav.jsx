@@ -33,7 +33,8 @@ const DashNav = () => {
         <Link to={ROUTES.LANDING}>Home</Link>
 
     </li> */}
-     <Link to={ROUTES.BMI}><li>BMI Calculator</li></Link>
+     <li>Drop a review</li>
+     <li>Add New Hospital</li>
 
     <li>Resources</li>
 </ul>

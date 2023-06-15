@@ -1,8 +1,89 @@
 .bmi-container{
-    display: flex;
-    flex-direction: row;
+    height: 100vh;
+    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%)
+}
+.bmi-content{
+  /* padding: 5%; */
+width: 60vw;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+height: 80vh;
+border-radius: 5px;
+box-shadow: 0px 0px 8px #ddd;
+}
+.bmi-text{
+    width: 50%;
+    padding: 1rem;
+    background-color: #E3F2FD;
+}
+.bmi-title{
+    margin-bottom: 1rem;
+}
+.par-one{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.par-two{
+    font-size: 1.2rem;
 }
 
-.bmi-content{
-    width: 40vw;
+.calculator{
+    padding: 2rem;
+  background-color: white;
+}
+.calc-title{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15%;
+}
+.calculator form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 25%;
+}
+.height-input{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 8px #BBDEFB;
+}
+.mass-input{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 8px #BBDEFB;
+}
+.calculate-btn{
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #0D47A1;
+    color: white;
+    /* font-weight: 600; */
+}
+.calculate-btn:hover{
+    cursor: pointer;
+    background-color:#BBDEFB ;
+    color: black;
+    transition: 0.4s;
+}
+
+.bmi{
+text-align: center;
+}
+
+@media only screen and (max-width: 1100px){
+    .bmi-text{
+        display: none;
+    }
+    .calculator form{
+        width: 100%;
+    }
 }

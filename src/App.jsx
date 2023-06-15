@@ -24,7 +24,7 @@ function App() {
       <Route path={ROUTES.SIGN_UP} element={ <UnAuthRoute> <SignUp /></UnAuthRoute>} />
       
       <Route path={ROUTES.DASHBOARD} element={<AuthRoute><Dashboard/> </AuthRoute>} />
-      <Route path={ROUTES.BMI} element={<AuthRoute><BMICalculator /></AuthRoute>} />
+      <Route path={ROUTES.BMI} element={<UnAuthRoute><BMICalculator /></UnAuthRoute>} />
       </Routes>
     </div>
   );

@@ -51,12 +51,13 @@ height: 100vh;
 }
 .carefinder-logo{
     margin-bottom: 1rem;
-    
+    font-family: 'Kaushan Script', cursive;
     
 }
 .carefinder-link{
     text-decoration: none;
     color:#1E88E5;
+    font-size: 1rem;
 }
 .login-title{
     margin-bottom: 0.5rem;
@@ -124,7 +125,7 @@ font-size: 0.8rem;
 }
 .google-signin:hover{
     cursor: pointer;
-    background: linear-gradient(90deg, rgba(52,41,241,1) 0%, rgba(77,77,252,1) 48%, rgba(136,174,255,1) 100%);
+    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
     color:white;
     transition: 0.3s;
 }
@@ -139,4 +140,37 @@ font-size: 0.8rem;
 .signup-text{
     text-align: center;
     font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 1100px){
+    .signin-desc {
+        display: none;
+    }
+    .carefinder-image{
+        display: none;
+    }
+    .signin-form{
+        margin-top: 3rem;
+        width:100vw;
+        padding: 0rem;
+        align-items: center;
+    }
+    .login-title{
+        font-size: 1.5rem;
+    }
+    .login-description{
+        font-size: 1rem;
+    }
+    /* .auth-email{
+        width: 80vw;
+    } */
+    .google-signin{
+        width: 75vw;
+    }
+    .or-text{
+        width: 75vw;
+    }
+    .signup-text{
+        width: 75vw;
+    }
 }

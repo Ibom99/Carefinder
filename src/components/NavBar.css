@@ -1,3 +1,5 @@
+
+
 .nav-container{
     background: #0D47A1;
     background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
@@ -15,7 +17,7 @@
     text-decoration: none;
     color: white;
 }
-.list-link{
+.atoz-link{
     text-decoration: none;
     color: white;
 }
@@ -34,6 +36,10 @@
     margin: 0rem 0rem 0rem 1rem;
     padding:8px 18px;
     font-weight:bold;
+   
+}
+.home-link p{
+    font-family: 'Kaushan Script', cursive;
 }
 
 .menu li{
@@ -91,18 +97,38 @@ margin-bottom: 1rem;
 }
 
 
-.m-feature p{
+.m-feature .home{
 font-weight: 600;
 padding: 1rem;
+text-decoration: none;
+color: black;
+}
+
+.BMI-link{
+    text-decoration: none;
+color: black;
+}
+.list-link{
+    text-decoration: none;
+color: black;
+}
+.signin-m{
+    text-decoration: none;
+color: black;
+}
+.signup-m{
+    text-decoration: none;
+color: black;
 }
 
 
+
 .m-menu li{
-    padding: 1.5rem;
+    padding: 1rem;
     margin-bottom: 0.5rem;
     text-decoration: none;
     list-style: none;
-    background: linear-gradient( rgba(52,41,241,1) 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+    background: linear-gradient(  #42A5F5 0 0) var(--p, 0) / var(--p, 0) no-repeat;
     transition: 0.4s, background-position 0s;
 }
 .m-menu li:hover{
@@ -141,6 +167,9 @@ background-color: rgba(136,174,255,1) ;
     }
     .m-menu{
         display: none;
+    }
+    .home p{
+        font-family: 'Kaushan Script', cursive;
     }
    
 
