@@ -3,7 +3,7 @@
     background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%)
 }
 .bmi-navigation{
-    margin-bottom: 2rem;
+    margin-bottom: 0.7rem;
 }
 .bmi-content{
   /* padding: 5%; */
@@ -12,35 +12,44 @@ width: 70vw;
 margin: 0 auto;
 display: flex;
 flex-direction: row;
-height: 80vh;
+height: 75vh;
 border-radius: 5px;
 /* box-shadow: 0px 0px 8px #ddd; */
 }
 .bmi-text{
-    width: 60%;
-    padding: 1rem;
+    
+    width: 50%;
+    padding: 2rem;
     color: white;
     /* background-color: #E3F2FD; */
 }
 .bmi-title{
     margin-bottom: 1rem;
+    text-align:center;
+    color: white;
+}
+.clinical-title{
+    margin-bottom: 1rem;
+
 }
 .par-one{
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 .par-two{
     font-size: 1.2rem;
+    
 }
 
 .calculator{
     padding: 2rem;
   background-color: white;
+  width: 50%;
 }
 .calc-title{
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 .calculator form{
     display: flex;
@@ -85,12 +94,15 @@ text-align: center;
 }
 
 @media only screen and (max-width: 1100px){
+    .bmi-container{
+        height: fit-content;
+    }
     .bmi-content{
         width: 85vw;
     }
-    .bmi-text{
+    /* .bmi-text{
         display: none;
-    }
+    } */
     /* .calculator{
         padding: 0;
         
@@ -99,5 +111,48 @@ text-align: center;
         width: 85%; 
         padding: 0rem;
         
+    }
+    .bmi-title{
+        margin-top: 2rem;
+font-size: 1.2rem;
+    }
+    .clinical-title{
+        font-size: 1rem;
+    }
+    .bmi-content{
+      width: 100vw;
+      flex-direction: column;
+    height: fit-content;
+      }
+      .bmi-text{
+        width: 90%;
+        /* background-color: antiquewhite; */
+        padding: 0rem;
+        margin: 0 auto;
+      }
+      .par-one{
+        font-size: 0.8rem;
+        /* margin-bottom: 1.2rem; */
+    }
+    .par-two{
+        font-size: 0.8rem;
+        margin-bottom: 2.2rem;
+    }
+    .calculator{
+        padding: 0rem;
+      /* background-color: white; */
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 2.5rem;
+    }
+    .calc-title{
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+    }
+    .calculator form{
+        margin-bottom: 10%;
+    }
+    .bmi{
+        margin-bottom: 2rem;
     }
 }

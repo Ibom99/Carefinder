@@ -1,0 +1,135 @@
+.faq-container{
+    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
+    color: white
+}
+.faq-questions{
+    width: 75vw;
+    margin: 0 auto;
+    /* background-color: aqua; */
+    padding-top: 15vh;
+    padding-bottom: 3rem;
+}
+.faq-title{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.q-one{
+     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.q-two{
+     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.q-three{
+     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between; 
+}
+.q-four{
+     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;  
+}
+.q-five{
+     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;  
+}
+.q-six{
+     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;  
+}
+.q-seven{
+     margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;  
+}
+.ans-one{
+    padding: 1rem;
+}
+.ans-two{
+    padding: 1rem;
+}
+.ans-three{
+    padding: 1rem;
+}
+.ans-four{
+    padding: 1rem;
+}
+.ans-five{
+    padding: 1rem;
+}
+.ans-six{
+    padding: 1rem;
+}
+.ans-seven{
+    padding: 1rem;
+}
+.first-faq{
+    border-bottom: 1px solid #E3F2FD;
+    padding: 1rem;
+}
+.second-faq{
+    border-bottom: 1px solid #E3F2FD;
+    padding: 1rem;
+
+}
+.third-faq{
+    border-bottom: 1px solid #E3F2FD;
+    padding: 1rem;
+
+}
+.fourth-faq{
+    border-bottom: 1px solid #E3F2FD;
+    padding: 1rem;
+
+}
+.fifth-faq{
+    border-bottom: 1px solid #E3F2FD;
+    padding: 1rem;
+
+}
+.sixth-faq{
+    border-bottom: 1px solid #E3F2FD;
+    padding: 1rem;
+
+}
+.seventh-faq{
+    padding: 1rem;
+
+    border-bottom: 1px solid #E3F2FD; 
+}
+
+.dropdown-btn{
+    /* padding: 0.5; */
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+    color: white;
+
+}
+.dropdown-btn:hover{
+    cursor: pointer;
+    /* color:#64B5F6; */
+}
+.plus-icon{
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1100px){
+    .faq-title{
+        
+        font-size: 1.5rem;
+        
+    }
+    .faq-questions{
+        width: 90vw;
+        padding-top: 7vh;
+    }
+}

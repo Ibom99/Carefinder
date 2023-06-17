@@ -42,11 +42,12 @@ const BMICalculator = () => {
 <div className='bmi-navigation'>
 <NavBar />
 </div>
+<h1 className='bmi-title'>What is the body mass index (BMI)?</h1>
 <div className='bmi-content'>
   <div className='bmi-text'>
-<h1 className='bmi-title'>What is the body mass index (BMI)?</h1>
+
 <p className='par-one'>The body mass index (BMI) is a measurement of a person's weight with respect to their height. It is more of an indicator than a direct measurement of a person's total body fat.(BMI applies to most adults 18-65 years.)</p>
-<h2>Clinical Relevance of BMI</h2>
+<h2 className='clinical-title'>Clinical Relevance of BMI</h2>
 <p className='par-two'>BMI is used by healthcare professionals to screen for overweight and obese indiviuals. The BMI is used to assess a person's health risks, prepare treatment plans, monitor changes and aide population health studies.</p>
   </div>
  <div className='calculator'>

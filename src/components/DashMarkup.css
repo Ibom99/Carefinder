@@ -1,10 +1,37 @@
 .dash-markup-container{
-    width: 40vw;
+    width: 100vw;
     height: 100vh;
-    background-color:#E3F2FD ;
+    /* background-color:#E3F2FD ; */
+    display: flex;
 }
 .dash-markup-content{
     margin: 10px;
+    width: 69vw;
     
     
+}
+.markdown-area{
+    display: flex;
+}
+.markdown-input{
+    width: 50%;
+    background-color: aqua;
+}
+.markdown-text{
+    width: 50%;
+    background-color: bisque;
+}
+.textarea{
+    padding: 8px;
+    outline: none;
+}
+.display-text{
+    padding:8px ;
+    width: 50%;
+    background-color: azure;
+    height: 80%;
+}
+.reviews{
+    background-color: blue;
+    width: 10rem;
 }

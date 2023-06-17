@@ -4,7 +4,10 @@ export const ROUTES = {
   SIGN_IN: '/signin',
   SIGN_UP: '/register',
   DASHBOARD: '/dashboard',
-  BMI: '/bmi_calculator'
+  BMI: '/bmi_calculator',
+  MARKDOWN: '/markdown_input',
+  FAQ: '/faq',
+
 }
 
 export const STORAGE_KEYS = {

@@ -25,7 +25,8 @@ const Dashboard = () => {
       <DashNav />
        
      <DashBio />
-      <DashMarkup />
+     <div className='entries'>Entries</div>
+      {/* <DashMarkup /> */}
 
      <DashHeader />
       

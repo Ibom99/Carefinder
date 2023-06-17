@@ -33,9 +33,9 @@ const DashNav = () => {
         <Link to={ROUTES.LANDING}>Home</Link>
 
     </li> */}
-     <li>Drop a review</li>
+     <li><Link to={ROUTES.MARKDOWN} >Drop a review</Link></li>
      <li>Add New Hospital</li>
-
+<li>Markdown Guide</li>
     <li>User Feedback</li>
 </ul>
 <div className='signout-btn'>

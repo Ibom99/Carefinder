@@ -11,7 +11,8 @@
     justify-content: space-between;
     border-radius: 0 0 10px 10px;
     color: white;
-
+/* position: fixed; */
+/* z-index: 999; */
 }
 .home-link{
     text-decoration: none;
@@ -28,6 +29,13 @@
 .signup-link{
     text-decoration: none;
     color: white;
+}
+.faq-link{
+    text-decoration: none;
+    color: white;
+}
+.about-link{
+    color: black;
 }
 .menu{
     display: flex;
@@ -59,7 +67,7 @@
 }
 
 .menu li :hover{
-    border-bottom: 3px solid rgba(26, 26, 85, 0.469);
+    border-bottom: 3px solid #90CAF9;
     padding-bottom: 10px;
     cursor: pointer;
     /* font-weight: bold; */
@@ -68,12 +76,32 @@
   /* background-size: 100% 2px; */
 
 }
+/* .m-content{
+    position: fixed;
+} */
+.m-navicon{
+   
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+   
+}
+.m-logo{
+    display: none;
+    margin-right: 2.5rem;
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    /* align-items: center; */
+    /* margin-top: 0.3rem; */
+}
 
 .icon{
     /* margin: 0rem 1rem; */
     display: none;
     color: white;
-
+width: 10vw;
+font-weight: bolder;
 }
 
 .icon:hover{
@@ -94,15 +122,17 @@ animation-delay: 0.3s;
 }
 .m-feature{
     text-align: center;
-margin-bottom: 1rem;
+margin-bottom: 0rem;
 }
 
 
-.m-feature .home{
-font-weight: 600;
-padding: 1rem;
+.m-feature .m-homelink p{
+font-weight: bolder;
+margin-top: 1rem;
+margin-bottom: 0.5rem;
 text-decoration: none;
 color: #1976D2;
+font-family: 'Kaushan Script', cursive;
 }
 
 .BMI-link{
@@ -121,8 +151,9 @@ color: black;
     text-decoration: none;
 color: black;
 }
-.m-logo{
-    display: none;
+.mfaq-link{
+    text-decoration: none;
+color: black; 
 }
 
 
@@ -171,20 +202,21 @@ background-color: rgba(136,174,255,1) ;
     .m-menu{
         display: none;
     }
-    .home p{
-        font-family: 'Kaushan Script', cursive;
-    }
    
-/* .m-logo{
-    display: none;
-} */
+   
+.m-logo{
+    display: block;
+}
+
     .icon{
         display: block;
-        margin: 0rem 0rem 0rem 1rem;
-    padding: 0.5rem 0rem 0rem 0.5rem;
+        margin: 0.5rem 0rem 0rem 2.2rem;
+        font-size: 1.5rem;
+    /* padding: 0.5rem 0rem 0rem 0.5rem; */
+   /* background-color: #42A5F5; */
    
     }
-    .home-link{
+    .m-homelink{
         text-decoration: none;
         color: black;
     }
@@ -192,6 +224,11 @@ background-color: rgba(136,174,255,1) ;
         text-decoration: none;
         color: black;
     }
+    .m-navicon{
+        height: 5vh;
+        /* background-color: #000; */
+    }
+
 }
 
 
