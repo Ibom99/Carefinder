@@ -11,11 +11,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@uiw/react-markdown-preview": "^4.1.13",
     "cors": "^2.8.5",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
     "firebase": "^9.22.1",
+    "html-to-draftjs": "^1.5.0",
     "react": "^18.2.0",
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
     "react-icons": "^4.8.0",
     "react-markdown": "^8.0.7",
     "react-router-dom": "^6.11.2",

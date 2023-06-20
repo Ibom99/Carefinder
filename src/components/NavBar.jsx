@@ -36,7 +36,8 @@ const NavBar = () => {
           <Link to={ROUTES.REVIEWS} className="list-link" ><li>Reviews</li></Link>
           <Link to={ROUTES.BMI} className="BMI-link" ><li>BMI Calculator</li></Link>
           
-          <li className="about-link">About Us</li>
+          <Link to={ROUTES.ABOUT} className="about-mlink"><li>About Us</li>
+          </Link>
           <Link to={ROUTES.FAQ}className="mfaq-link"><li>FAQs</li></Link> 
             <Link to={ROUTES.SIGN_IN} className="signin-m"><li>Sign In</li></Link>
           <Link to={ROUTES.SIGN_UP} className="signup-m"><li>Sign Up</li></Link>
@@ -55,7 +56,7 @@ const NavBar = () => {
         <li><Link to={ROUTES.BMI} className="home-link" >BMI Calculator</Link></li>
        
           
-          <li>About Us</li>
+          <li><Link to={ROUTES.ABOUT}className="about-link">About Us</Link></li>
           <li><Link to={ROUTES.FAQ}className="faq-link">FAQs</Link> </li>
           
           <li><Link to={ROUTES.SIGN_IN} className="signin-link">Sign In</Link></li>

@@ -157,7 +157,7 @@ const Faq = () => {
 
 {isOpenSeven && (
 <div className='ans-seven'>
-<p>No, that information is not availble but it can be added in the reviews. </p>
+<p>Yes, the website is free to use and read reviews. Drop yours as well! </p>
 </div>
 )}
 </div>
