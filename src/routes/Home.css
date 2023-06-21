@@ -33,11 +33,13 @@
 }
 .list{
     display: flex;
+    /* justify-content: space-evenly; */
     
 }
 
 .doctor{
     height: fit-content;
+    /* background-color: azure; */
 }
 .faq{
     color: white;

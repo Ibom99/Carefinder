@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { createReviewDocument } from '../firebase'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore'
-import ReviewsSearchBar from './ReviewsSearchBar'
+import ReviewsSearchBar from '../components/ReviewsSearchBar'
 
 const Reviews = () => { 
   const emptyForm = {
@@ -25,6 +25,8 @@ const Reviews = () => {
   const [editorState, setEditorState] = useState("")
   const [formData, setFormData] = useState(emptyForm)
   const [allReviews, setAllReviews] = useState([])
+  const [filteredReviews, setFilteredReviews] = useState([]);
+
 
   useEffect(() => {
     getReviews();
@@ -80,7 +82,7 @@ const Reviews = () => {
       if (res){
         setFormData(emptyForm)
         getReviews()
-        window.location.reload()
+        // window.location.reload()
       } 
     } catch (error){
       console.log("error")
@@ -104,38 +106,56 @@ const Reviews = () => {
 
      {/* <ReviewsSearchBar allReviews={allReviews} /> */}
 
-      <label htmlFor='hospitalName'>Hospital Name</label>
+      
 
-      <input type='text' name='hospitalName' value={formData.hospitalName} onChange={handleChange} placeholder="Enter hospital name" className='hospital-input' />
+      <h1 className='review-title'>Reviews</h1>
+      <ReviewsSearchBar allReviews={allReviews} setFilteredReviews={setFilteredReviews} />
 
-<label>Review</label>
-     <TextAreaWithFormatting
-     name='review'
-     value={formData.review}
-        onEditorStateChange={getMarkDown}
-        editorState={editorState}
-        
-      />
-      <label>Link</label>
-      <input type='text' name='link' placeholder="Enter hospital link" value={formData.link} onChange={handleChange} className='link-input'/>
-
-      <label>Contact Information</label>
-      <input type='text' name='contact' placeholder="Enter contact information" value={formData.contact} onChange={handleChange} className='contact-input'/>
-
-      <Button onClick={postReview} className="post-btn" text="Post"  />
-
-      Reviews
+    
       <div className="reviews-list">
-          {allReviews.map(review => (
+      {(filteredReviews.length > 0 ? filteredReviews : allReviews).map(review => (
             <div className='review-card' key={review.id}>
-              <p>Hospital Name: {review.hospitalName}</p>
-              <p>Review: {review.review}</p>
-              <p>Link: {review.link}</p>
-              <p>Contact Details: {review.contact} </p>
-              <hr />
+              <p className='hospital-review'><b> {review.hospitalName}</b></p>
+              {/* <p>{review.createdAt}</p> */}
+              <p>{review.review}</p>
+              <p><b>Link:</b> {review.link}</p>
+              <p><b>Contact Details:</b> {review.contact} </p>
+              {/* <hr /> */}
             </div>
           ))}
         </div>
+        
+<div className='review-inputs'>
+<div className='set-one'>
+<label htmlFor='hospitalName'>Hospital Name</label>
+
+<input type='text' name='hospitalName' value={formData.hospitalName} onChange={handleChange} placeholder="Enter hospital name" className='hospital-input' />
+
+<label>Review</label>
+<TextAreaWithFormatting
+name='review'
+value={formData.review}
+  onEditorStateChange={getMarkDown}
+  editorState={editorState}
+  
+/>
+</div>
+
+<div className='set-two'>
+<label>Link</label>
+      <input type='text' name='link' placeholder="Enter hospital link" value={formData.link} onChange={handleChange} className='link-input'/>
+
+      <label>Contact Information:</label>
+      <input type='text' name='contact' placeholder="Enter contact information" value={formData.contact} onChange={handleChange} className='contact-input'/>
+
+</div>
+</div>
+       
+      <div className='btn-container'>
+      <Button onClick={postReview} className="post-btn" text="Post Review"  />
+
+      </div>
+     
      </div>
     </div>
   )
