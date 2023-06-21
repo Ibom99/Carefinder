@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./DashMarkup.css"
 import DashNav from './DashNav'
 import DashHeader from './DashHeader'
-import ReactMarkdown from 'react-markdown'
+
 // import { Editor } from 'react-draft-wysiwyg'
 // import { draftToHtml } from "draftjs-to-html"
 // import { convertToRaw } from 'draft-js'
@@ -11,16 +11,7 @@ const DashMarkup = () => {
   const [input, setInput] = useState()
   const [reviews, setReviews] = useState([]);
 
-  // const [markdownValue, setMarkdownValue] = useState("")
-
-  // const [editorState, setEditorState] = useState("")
-
-  // const getDescMarkDown = (e) => {
-  //   setEditorState(e);
-  //   const value = editorState && draftToHtml(convertToRaw(editorState.getCurrentContent()));
-  //   setMarkdownValue(value);
-  //   console.log(value)
-  // };
+ 
 
   const handleSave = () => {
     const newReview = {

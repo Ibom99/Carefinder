@@ -33,7 +33,9 @@
 }
 .list{
     display: flex;
+    
 }
+
 .doctor{
     height: fit-content;
 }

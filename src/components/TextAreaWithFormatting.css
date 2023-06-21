@@ -1,0 +1,18 @@
+.textarea-container .wrapper {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  .wrapper{
+    background-color: antiquewhite;
+  }
+  
+  .editor {
+    padding: 0.5rem 1rem;
+    height: 200px;
+    background-color: #fff;
+    /* webkitt */
+  }
+  
+  .toolbar {
+    display: none;
+  }
