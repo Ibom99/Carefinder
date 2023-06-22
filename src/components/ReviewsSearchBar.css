@@ -5,17 +5,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5.5rem;
     /* flex-direction: column; */
     /* background-color: antiquewhite; */
 }
 .searchbar-container label{
     font-size: 1.5rem;
-    color: white;
+    /* color: white; */
+
+
 }
 .searchbar-container input{
     width: 60%;
     padding: 10px;
     border-radius: 10px;
+    border:1px solid black;
+    box-shadow: 0px 0px 8px #ddd;
+margin-left: 0.5rem;
 }
 @media only screen and (max-width: 1100px){
     .searchbar-container{
@@ -24,5 +30,7 @@
     }
     .searchbar-container input{
         width: 100%;
+        margin-left: 0rem;
+        margin-top: 1rem;
     }
 }

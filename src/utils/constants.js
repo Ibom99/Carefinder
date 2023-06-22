@@ -5,7 +5,7 @@ export const ROUTES = {
   SIGN_UP: '/register',
   DASHBOARD: '/dashboard',
   BMI: '/bmi_calculator',
-  MARKDOWN: '/markdown_input',
+  MARKDOWN: '/content_management',
   FAQ: '/faq',
   ABOUT: '/about_us'
 

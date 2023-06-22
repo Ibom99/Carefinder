@@ -33,7 +33,7 @@ const NavBar = () => {
           <div className="m-feature">
         <Link className="m-homelink" to={ROUTES.LANDING}><p>Carefinder</p></Link>
           </div>
-          <Link to={ROUTES.REVIEWS} className="list-link" ><li>Reviews</li></Link>
+          <Link to={ROUTES.REVIEWS} className="list-link" ><li>Hospital Reviews</li></Link>
           <Link to={ROUTES.BMI} className="BMI-link" ><li>BMI Calculator</li></Link>
           
           <Link to={ROUTES.ABOUT} className="about-mlink"><li>About Us</li>
@@ -52,7 +52,7 @@ const NavBar = () => {
           <Link to={ROUTES.LANDING} className="home-link" ><p>Carefinder</p></Link>
         </div>
         <ul className="menu">
-        <li><Link to={ROUTES.REVIEWS} className="atoz-link" >Reviews</Link></li>
+        <li><Link to={ROUTES.REVIEWS} className="atoz-link" >Hospital Reviews</Link></li>
         <li><Link to={ROUTES.BMI} className="home-link" >BMI Calculator</Link></li>
        
           

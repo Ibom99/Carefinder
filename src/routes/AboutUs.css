@@ -1,8 +1,8 @@
-.about-container{
+/* .about-container{
     
     /* color: black; */
-    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
-}
+    /* background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%); 
+} */
 
 .about-banner{
     background-color: white;
@@ -112,6 +112,7 @@ height: 40vh;
         width: 90vw;
         padding: 0rem;
       background: none;
+
         /* margin-top: 2rem; */
     }
     .about-text{
@@ -119,15 +120,26 @@ height: 40vh;
         /* padding: 1rem; */
         /* background-color: black; */
         margin: 0;
-        
+        background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
         /* text-align: center; */
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 1rem;
     }
     .about-details{
         width: 100%;
         /* margin-top: 2rem; */
+        background-color: white;
         margin: 0;
         margin-bottom: 3rem;
+        color: black;
+        /* padding-bottom: 2rem; */
+        border-radius: 5px;
+        padding: 0rem 1rem 2rem 1rem;
+box-shadow: 0px 0px 8px #ddd;
+
     }
+    
     .hospital-img{
         /* width: 40rem; */
         height: 60%;

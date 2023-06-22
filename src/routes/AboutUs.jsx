@@ -55,7 +55,7 @@ Our vision is to ease your navigation and hospital selection with confidence.
 <div className='mission-text'>
 <h2 className='mission-title'>Mission</h2>
 <p className='mission-description'>
-Our mission is to empower individuals and promote informed hospital selection decisions by providing a reliable and user-friendly platform for accessing and sharing hospital reviews. We aim to enhance transparency, facilitate meaningful patient experiences, and contribute to the improvement of hospital visit experiences worldwide.
+Our mission is to empower individuals and promote informed hospital selection decisions by providing a reliable and user-friendly platform for accessing and sharing hospital reviews. We aim to enhance transparency, facilitate meaningful patient experiences, and contribute to the improvement of hospital visit experiences in Nigeria.
 </p>
 </div>
           </div>

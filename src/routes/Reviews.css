@@ -1,15 +1,25 @@
 .review-container{
-    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
+    /* background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%); */
     height: fit-content;
 }
 
 .review-title{
     text-align: center;
     margin-bottom: 2rem;
-    color: white;
+    /* color: white; */
+    padding-top: 5rem;
+    font-size: 3rem;
 }
-
+.review-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    width: 90vw;
+    height: 50vh;
+}
 .reviews-list{
+    
     padding: 1rem;
     /* background-color: antiquewhite; */
     display: grid;
@@ -27,15 +37,21 @@
 .review-card{
     /* width: 20rem; */
     /* height: 10rem; */
-    background-color: white;
+    /* background-color: white; */
     padding: 1rem;
     height: 15rem;
     border-radius: 10px;
     box-shadow: 0px 0px 8px #ddd;
     
+    
 }
 .review-card p{
     margin-bottom: 0.5rem;
+}
+.enter-review-title{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
  .hospital-input{
     padding: 0.5rem;
@@ -60,6 +76,9 @@ border-radius: 5px;
     padding: 1rem;
     width: 80vw;
     justify-content: space-between;
+}
+.hospital-name{
+font-size: 1.5rem;
 }
 .set-one{
     display: flex;
@@ -88,7 +107,7 @@ border-radius: 5px;
     font-weight: bold;
 
 }
-.btn-container{
+.post-btn-container{
 /* background-color: #BBDEFB; */
 display: flex;
 width: 80vw;
@@ -116,7 +135,7 @@ margin-bottom: 2rem;
     .set-two{
         width: 100%;
     }
-    .btn-container{
+    .post-btn-container{
         justify-content: center;
         margin: 0 auto;
     

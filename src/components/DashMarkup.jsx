@@ -1,73 +1,85 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import { db } from '../firebase';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+
 import "./DashMarkup.css"
 import DashNav from './DashNav'
 import DashHeader from './DashHeader'
+import { BsTrash3 } from 'react-icons/bs'
 
-// import { Editor } from 'react-draft-wysiwyg'
-// import { draftToHtml } from "draftjs-to-html"
-// import { convertToRaw } from 'draft-js'
 
 const DashMarkup = () => {
-  const [input, setInput] = useState()
   const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
- 
-
-  const handleSave = () => {
-    const newReview = {
-      id: Date.now(),
-      content: input,
-    };
-    setReviews([...reviews, newReview]);
-    setInput('');
+  const fetchReviews = async () => {
+    try {
+      const reviewsRef = collection( db, 'reviews');
+      const snapshots = await getDocs (reviewsRef);
+      const reviewsData = snapshots.docs.map(doc => doc.data());
+      setReviews(reviewsData);
+      setLoading(false); // Set loading to false after fetching data
+    } catch (error) {
+      console.log('Error fetching reviews:', error);
+    }
   };
+  
+  useEffect(() => {
+    fetchReviews();
+  }, []);
 
-  const handleDelete = (id) => {
-    const updatedReviews = reviews.filter((review) => review.id !== id);
-    setReviews(updatedReviews);
+
+  const deleteReview = async (reviewId) => {
+    try {
+      await deleteDoc(doc(db, 'reviews', reviewId));
+      fetchReviews(); // Refresh the reviews after deletion
+    } catch (error) {
+      console.log('Error deleting review:', error);
+    }
   };
-
+  
   
 
   return (
-    <div className='dash-markup-container'><DashNav />
+    <div className='dash-markup-container'>
+      <DashNav />
         <div className='dash-markup-content'>
-        CONTENT MARKUP
-        <div className='markdown-area'>
-        <div className='markdown-input' >
-        <textarea cols="50" rows="10"
-        className='textarea' value={input} onChange={(e) => setInput(e.target.value)}/>
-        <button onClick={handleSave}>Save</button>
-        </div>
-
-        {/* <Editor
-        wrapperClassName='wrapper'
-        editorClassName='editor'
-        toolbarClassName='toolbar'
-        onEditorStateChange={getDescMarkDown}
-        editorState={editorState}
-      /> */}
-
-       <div className='markdown-text'>
-        Markdown Preview
-       <ReactMarkdown className='display-text'>{input}</ReactMarkdown> 
-
-       </div>
-       <div className='reviews'>
-       {reviews.map((review) => (
-        <div key={review.id}>
-          {/* <p>Date: {review.id}</p> */}
-          <p>{review.content}</p>
-          <button onClick={() => handleDelete(review.id)}>Delete</button>
-        </div>
-      ))}
-       </div>
-       
         
+        <div className='div-delete'>
+        {loading ? (
+            <div className="loader">Loading...</div>
+          ) : (
+          <table className='reviews-table'>
+
+          
+        <thead>
+      <tr>
+        <th>Hospital Name</th>
+        <th>Review</th>
+        <th>Date Added</th>
+      </tr>
+    </thead>
+    <tbody>
+        {reviews.map(review => (
+  <tr key={review.id}>
+  <td><b>{review.hospitalName}</b></td>
+  
+  <td dangerouslySetInnerHTML={{__html: review.review}}></td>
+    <td>{review.createdAt.toDate().toString()}</td>
+  <td>
+    <button className='delete-btn' onClick={() => deleteReview(review.id)}><BsTrash3 /></button>
+  </td>
+</tr> 
+
+))}
+</tbody>
+</table>
+ )}
         </div>
-      
+
         </div>
      <DashHeader />
+    
     </div>
   )
 }

@@ -11,6 +11,11 @@ import { createReviewDocument } from '../firebase'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import ReviewsSearchBar from '../components/ReviewsSearchBar'
+// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
+
+
+// import sanitizeHtml from 'sanitize-html';
+
 
 const Reviews = () => { 
   const emptyForm = {
@@ -26,6 +31,7 @@ const Reviews = () => {
   const [formData, setFormData] = useState(emptyForm)
   const [allReviews, setAllReviews] = useState([])
   const [filteredReviews, setFilteredReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
@@ -38,24 +44,13 @@ const Reviews = () => {
       const snapshots = await getDocs(reviewsRef);
       const docs = snapshots.docs.map((doc) => doc.data());
       setAllReviews(docs);
+      setLoading(false);
       console.log(docs)
     } catch (error) {
       console.log("Error getting reviews:", error);
     }
   };
   
-// useEffect(() =>{
-//   (async () => {
-//     // reference the data
-// const reviewsRef = collection(db, "reviews")
-
-// const snapshots = await getDocs(reviewsRef)
-
-// const docs = snapshots.docs.map((doc) => doc.data())
-// console.log(docs)
-//   })()
-// }, [])
-
 
 
   const getMarkDown = (e) => {
@@ -82,6 +77,7 @@ const Reviews = () => {
       if (res){
         setFormData(emptyForm)
         getReviews()
+        
         // window.location.reload()
       } 
     } catch (error){
@@ -108,24 +104,30 @@ const Reviews = () => {
 
       
 
-      <h1 className='review-title'>Reviews</h1>
+      <h1 className='review-title'>Hospital Reviews</h1>
       <ReviewsSearchBar allReviews={allReviews} setFilteredReviews={setFilteredReviews} />
 
     
       <div className="reviews-list">
-      {(filteredReviews.length > 0 ? filteredReviews : allReviews).map(review => (
+      {loading ? (
+            <div className="review-loader">Loading...</div>
+          ) : (
+      (filteredReviews.length > 0 ? filteredReviews : allReviews).map(review => (
             <div className='review-card' key={review.id}>
-              <p className='hospital-review'><b> {review.hospitalName}</b></p>
+              <p className='hospital-name'><b> {review.hospitalName}</b></p>
               {/* <p>{review.createdAt}</p> */}
-              <p>{review.review}</p>
+              <p dangerouslySetInnerHTML={{__html: review.review}}></p>
               <p><b>Link:</b> {review.link}</p>
               <p><b>Contact Details:</b> {review.contact} </p>
               {/* <hr /> */}
             </div>
-          ))}
+          )))}
+          
         </div>
         
+        <h1 className='enter-review-title'>Drop your review down below!</h1>
 <div className='review-inputs'>
+  
 <div className='set-one'>
 <label htmlFor='hospitalName'>Hospital Name</label>
 
@@ -151,7 +153,7 @@ value={formData.review}
 </div>
 </div>
        
-      <div className='btn-container'>
+      <div className='post-btn-container'>
       <Button onClick={postReview} className="post-btn" text="Post Review"  />
 
       </div>

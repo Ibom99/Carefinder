@@ -1,6 +1,7 @@
 .faq-container{
-    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
-    color: white
+    /* background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%); */
+    /* color: white */
+    background-color: #E3F2FD;
 }
 .faq-questions{
     width: 75vw;
@@ -72,38 +73,38 @@
     padding: 1rem;
 }
 .first-faq{
-    border-bottom: 1px solid #E3F2FD;
+    border-bottom: 1px solid #BBDEFB;
     padding: 1rem;
 }
 .second-faq{
-    border-bottom: 1px solid #E3F2FD;
+    border-bottom: 1px solid #BBDEFB;
     padding: 1rem;
 
 }
 .third-faq{
-    border-bottom: 1px solid #E3F2FD;
+    border-bottom: 1px solid #BBDEFB;
     padding: 1rem;
 
 }
 .fourth-faq{
-    border-bottom: 1px solid #E3F2FD;
+    border-bottom: 1px solid #BBDEFB;
     padding: 1rem;
 
 }
 .fifth-faq{
-    border-bottom: 1px solid #E3F2FD;
+    border-bottom: 1px solid #BBDEFB;
     padding: 1rem;
 
 }
 .sixth-faq{
-    border-bottom: 1px solid #E3F2FD;
+    border-bottom: 1px solid #BBDEFB;
     padding: 1rem;
 
 }
 .seventh-faq{
     padding: 1rem;
 
-    border-bottom: 1px solid #E3F2FD; 
+    border-bottom: 1px solid #BBDEFB; 
 }
 
 .dropdown-btn{
@@ -111,7 +112,7 @@
     height: fit-content;
     background-color: transparent;
     border: none;
-    color: white;
+    color: #0D47A1;
 
 }
 .dropdown-btn:hover{

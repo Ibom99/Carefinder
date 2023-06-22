@@ -19,7 +19,7 @@ const ReviewsSearchBar = ({ allReviews, setFilteredReviews }) => {
     };
   return (
     < div className='searchbar-container'>
-      <label>Search Hospital Review:</label>
+      <label><em>Search by name:</em></label>
        <input
         type="text"
         placeholder="Enter hospital name..."

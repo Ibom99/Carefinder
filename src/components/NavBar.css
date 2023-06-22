@@ -92,7 +92,7 @@
     display: none;
     margin-right: 2.5rem;
     font-family: 'Kaushan Script', cursive;
-    color: white;
+    color:#1E88E5;
     /* align-items: center; */
     /* margin-top: 0.3rem; */
 }
@@ -100,7 +100,7 @@
 .icon{
     /* margin: 0rem 1rem; */
     display: none;
-    color: white;
+    color: #1E88E5;
 width: 10vw;
 font-weight: bolder;
 }

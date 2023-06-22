@@ -10,30 +10,44 @@
     
     
 }
-.markdown-area{
+
+.loader{
+    /* text-align: center; */
+    justify-content: center;
     display: flex;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    height: 100vh;
 }
-.markdown-input{
-    width: 50%;
-    background-color: aqua;
+.delete-btn{
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: 1.2rem;
 }
-.markdown-text{
-    width: 50%;
-    background-color: bisque;
+.delete-btn:hover{
+    cursor: pointer;
 }
-.textarea{
-    padding: 8px;
-    outline: none;
+.reviews-table{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.display-text{
-    padding:8px ;
-    width: 50%;
-    background-color: azure;
-    height: 80%;
+th{
+    background-color: #0D47A1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.4rem;
 }
-.reviews{
-    background-color: antiquewhite;
-    width: 10rem;
+td{
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 0.8rem;
+    /* border-bottom: 1px solid grey; */
+}
+
+.reviews-table tbody tr:nth-of-type(even) {
+    background-color: #E3F2FD;
 }
 
 @media only screen and (max-width: 1100px){

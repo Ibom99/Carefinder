@@ -19,7 +19,8 @@ const Home = () => {
       <div className="landing-content">
         <div className="search-bar-container">
           <div className="website-title">
-            <h1>Search Hospital</h1>
+            <h1>Find Care. Share Reviews. <span className="colored-title">Carefinder.</span></h1>
+            <h2>Search Hospital</h2>
             <p className="search-description">
               Locate the hospitals in the city nearest to you.
             </p>
@@ -31,27 +32,6 @@ const Home = () => {
 
           <SearchResultsList results={results} />
 
-          {/* <div className="faq">
-            <h2 className="faq-title">FAQ</h2>
-            <p className="question">
-              <b>Q.</b> Are the addresses of the hospitals available?
-            </p>
-            <p className="answer">
-              <b>A.</b> <em>Yes, they are under the hospital name.</em>
-            </p>
-            <p className="question">
-              <b>Q.</b> Are doctors contacts in the hospitals available?
-            </p>
-            <p className="answer">
-              <b>A.</b> <em>No, just the hospital location.</em>{" "}
-            </p>
-            <p className="question">
-              <b>Q.</b> Can I find hospitals outside Nigeria?
-            </p>
-            <p className="answer">
-              <b>A.</b> <em>No, just hospitals in Nigeria.</em>
-            </p>
-          </div> */}
         </div>
 
         <img
