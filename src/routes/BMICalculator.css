@@ -6,9 +6,13 @@
 .bmi-navigation{
     margin-bottom: 0.7rem;
 }
+.bmi-display{
+padding: 3rem 0rem 8rem 0rem;
+}
 .bmi-content{
   /* padding: 5%; */
 width: 70vw;
+/* margin-bottom: 5rem; */
 
 margin: 0 auto;
 display: flex;
@@ -25,8 +29,9 @@ box-shadow: 0px 0px 8px #ddd;
     /* background-color: #E3F2FD; */
 }
 .bmi-title{
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     text-align:center;
+    font-size: 3rem;
     /* color: white; */
 }
 .clinical-title{
@@ -109,6 +114,9 @@ text-align: center;
         padding: 0;
         
     }*/
+    .bmi-display{
+        padding: 1.5rem 0rem 4rem 0rem;
+        }
     
     .calculator form{
         width: 85%; 
@@ -116,8 +124,8 @@ text-align: center;
         
     }
     .bmi-title{
-        margin-top: 3rem;
-font-size: 1.4rem;
+        margin-top: 1rem;
+font-size: 2rem;
 margin-bottom: 2rem;
     }
     .clinical-title{

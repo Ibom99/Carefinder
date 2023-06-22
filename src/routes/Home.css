@@ -54,6 +54,7 @@
 .doctor{
     height: fit-content;
     /* background-color: azure; */
+    margin-bottom: 9rem;
 }
 
 .footer{
@@ -76,7 +77,7 @@
     .doctor{
         width: 80vw;
     margin: 0 auto;
-        
+      margin-bottom: 5rem;  
     }
     .landing-content{
         flex-direction: column;

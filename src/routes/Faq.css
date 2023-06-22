@@ -3,6 +3,9 @@
     /* color: white */
     background-color: #E3F2FD;
 }
+.faq-content{
+    margin-bottom: 10rem;
+}
 .faq-questions{
     width: 75vw;
     margin: 0 auto;

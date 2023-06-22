@@ -18,6 +18,10 @@ height: 40vh;
 }
 .about-title h1{
     margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+.about-title p{
+    font-size: 1.5rem;
 }
 .hospital-img{
     /* width: 40rem; */
@@ -26,18 +30,21 @@ height: 40vh;
 }
 .about-desc{
     /* margin-top: 10vh; */
-    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
+    background-color:  #0D47A1;
     display: flex;
     width: 80vw;
     margin: 0 auto;
     padding: 2rem;
     color: white;
-    
+    border-radius: 5px;
     
 }
 .about-text{
     width: 50%;
     margin: 2rem;
+}
+.about-content{
+    margin-bottom: 5rem;
 }
 .welcome{
     margin-bottom: 0.8rem;
@@ -106,12 +113,17 @@ height: 40vh;
     .about-title{
         padding-left: 0rem;
         padding: 1rem;
+        padding-top: 4rem;
+    }
+    .about-title p{
+        font-size: 1rem;
     }
     .about-desc{
         flex-direction: column;
         width: 90vw;
         padding: 0rem;
       background: none;
+     
 
         /* margin-top: 2rem; */
     }

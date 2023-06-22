@@ -2,6 +2,7 @@ import React from 'react'
 import "./BMICalculator.css"
 import { useState } from 'react';
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 
 const BMICalculator = () => {
@@ -42,6 +43,7 @@ const BMICalculator = () => {
 <div className='bmi-navigation'>
 <NavBar />
 </div>
+<div className='bmi-display'>
 <h1 className='bmi-title'>What is the body mass index (BMI)?</h1>
 <div className='bmi-content'>
   <div className='bmi-text'>
@@ -71,9 +73,11 @@ const BMICalculator = () => {
  </div>
   
      
- 
+ </div>
       </div>
-    
+    <div className='footer'>
+      <Footer /> 
+    </div>
       
     </div>
   )

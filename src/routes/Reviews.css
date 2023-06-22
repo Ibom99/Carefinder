@@ -101,11 +101,17 @@ font-size: 1.5rem;
 .post-btn{
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: white;
+    background-color: #BBDEFB;
     border: none;
     box-shadow: 0px 0px 8px #ddd;
     font-weight: bold;
 
+}
+.post-btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #135a95;
+    transition: 0.4s;
 }
 .post-btn-container{
 /* background-color: #BBDEFB; */
@@ -113,6 +119,7 @@ display: flex;
 width: 80vw;
 justify-content: end;
 margin-bottom: 2rem;
+padding: 2rem;
 /* background-color: #BBDEFB; */
 /* margin: 0 auto; */
 }

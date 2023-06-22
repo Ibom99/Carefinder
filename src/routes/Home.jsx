@@ -7,6 +7,7 @@ import Download from "../components/Download";
 import NavBar from "../components/NavBar";
 
 import "./Home.css";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [results, setResults] = useState([]);
@@ -40,7 +41,7 @@ const Home = () => {
         />
       </div>
       <footer className="footer">
-        <h1>Footer</h1>
+      <Footer />
       </footer>
     </div>
   );

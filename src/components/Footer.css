@@ -1,0 +1,123 @@
+.footer-container{
+    background: #0D47A1;
+    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
+    color: white;
+    padding: 4rem;
+    
+    
+}
+.footer-content{
+    display: flex;
+}
+.footer-title{
+    margin-bottom: 3rem;
+    font-family: 'Kaushan Script', cursive;
+
+}
+.footer-contact h1{
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+.footer-navigation h1{
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+.footer-features h1{
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+.footer-contact p a{
+    text-decoration: none;
+    color: white;
+    /* margin-bottom: 1rem; */
+}
+.footer-contact p{
+    margin-bottom: 0.8rem;
+}
+.footer-contact{
+    margin-right: 5rem;
+}
+.footer-navigation{
+    margin-right: 5rem;
+
+}
+.footer-navigation p{
+    margin-bottom: 0.4rem;
+}
+.footer-features p{
+    margin-bottom: 0.4rem;
+}
+.footer-features{
+    margin-right: 5rem;
+
+}
+.footer-link{
+    text-decoration: none;
+    color: white;
+   
+}
+.footer-support{
+    display: flex;
+    flex-direction: column;
+}
+.support-title{
+    margin-bottom: 0.8rem;
+}
+.support-desc{
+    margin-bottom: 0.8rem;
+
+}
+.support-label{
+    font-size: 1rem;
+}
+.support-input{
+    padding: 0.4rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+}
+.support-btn{
+    padding: 0.4rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #0D47A1;
+    color: white;
+}
+.support-btn:hover{
+    cursor: pointer;
+    background-color: #a7d4fa;
+    color: black;
+    transition: 0.4s;
+}
+@media only screen and (max-width: 1100px){
+    .footer-container{
+       
+        padding: 2.5rem;
+        font-size: 0.8rem;
+    }
+    .footer-content{
+        flex-direction: column;
+    }
+    .footer-contact{
+        margin-bottom: 2rem;
+    }
+    .footer-contact h1{
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    .footer-navigation{
+        margin-bottom: 2rem ;
+    }
+    .footer-navigation h1{
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+    .footer-features{
+        margin-bottom: 2rem ;
+        
+    }
+    .footer-features h1{
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+}

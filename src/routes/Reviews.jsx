@@ -11,6 +11,7 @@ import { createReviewDocument } from '../firebase'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import ReviewsSearchBar from '../components/ReviewsSearchBar'
+import Footer from '../components/Footer'
 // import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 
 
@@ -158,6 +159,9 @@ value={formData.review}
 
       </div>
      
+     </div>
+     <div className='footer'>
+<Footer />
      </div>
     </div>
   )

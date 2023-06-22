@@ -3,6 +3,7 @@ import "./Faq.css"
 import NavBar from '../components/NavBar'
 import { BsPlusSquareDotted } from "react-icons/bs";
 import { BsXSquare} from "react-icons/bs";
+import Footer from '../components/Footer';
 
 const Faq = () => {
     const [isActive, setIsActive] = useState(false)
@@ -164,6 +165,9 @@ const Faq = () => {
 
    
         </div>
+      </div>
+      <div className='footer'>
+<Footer />
       </div>
     </div>
   )

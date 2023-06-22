@@ -4,6 +4,7 @@ import "./AboutUs.css"
 
 import { IoMdPeople } from "react-icons/io";
 import { VscNotebook } from "react-icons/vsc";
+import Footer from '../components/Footer';
 
 const AboutUs = () => {
   return (
@@ -15,7 +16,7 @@ const AboutUs = () => {
         <div className='about-banner'>
 <div className='about-title'>
 <h1>About Us</h1>
-      <p>What is Carefinder?</p>
+      <p>Empowering Your Health Journey, One Review at a Time.</p>
 </div>
 <img className='hospital-img' src="https://res.cloudinary.com/dzzohccd8/image/upload/v1687259614/DEV%20Images/istockphoto-1312706413-612x612_ggj1ez.jpg" />
 
@@ -64,6 +65,9 @@ Our mission is to empower individuals and promote informed hospital selection de
         </div>
        
 
+      </div>
+      <div className='footer'>
+<Footer />
       </div>
     </div>
   )
