@@ -56,7 +56,7 @@ const DashMarkup = () => {
       <tr>
         <th>Hospital Name</th>
         <th>Review</th>
-        <th>Date Added</th>
+        <th>Date/Time Added</th>
       </tr>
     </thead>
     <tbody>
@@ -78,8 +78,9 @@ const DashMarkup = () => {
         </div>
 
         </div>
+        <div className='content-management-header'>
      <DashHeader />
-    
+     </div>
     </div>
   )
 }

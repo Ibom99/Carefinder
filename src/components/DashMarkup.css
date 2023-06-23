@@ -45,19 +45,23 @@ td{
     font-size: 0.8rem;
     /* border-bottom: 1px solid grey; */
 }
+.reviews-table{
+    width: 100%;
+}
 
 .reviews-table tbody tr:nth-of-type(even) {
     background-color: #E3F2FD;
 }
 
 @media only screen and (max-width: 1100px){
-    .markdown-area{
+    .dash-markup-container{
         flex-direction: column;
     }
-    .display-text{
-        width: 100%;
+    .content-management-header{
+        display: none;
     }
-    .markdown-text{
-height: 40vh;
-    }
+    
+  .dash-markup-content{
+    width: 100vw;
+  }
 }

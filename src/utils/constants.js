@@ -7,7 +7,9 @@ export const ROUTES = {
   BMI: '/bmi_calculator',
   MARKDOWN: '/content_management',
   FAQ: '/faq',
-  ABOUT: '/about_us'
+  ABOUT: '/about_us',
+  SUPPORT: '/feedback_management'
+
 
 }
 

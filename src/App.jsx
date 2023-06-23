@@ -15,6 +15,7 @@ import { useState } from "react";
 // import { ReviewProvider } from "./components/ReviewContext";
 import Faq from "./routes/Faq";
 import AboutUs from "./routes/AboutUs";
+import DashSupport from "./components/DashSupport";
 
 function App() {
 // const [results, setResults] = useState([])
@@ -32,6 +33,7 @@ function App() {
       <Route path={ROUTES.DASHBOARD} element={<AuthRoute><Dashboard/> </AuthRoute>} />
       <Route path={ROUTES.BMI} element={<UnAuthRoute><BMICalculator /></UnAuthRoute>} />
       <Route path={ROUTES.MARKDOWN} element={<AuthRoute><DashMarkup /></AuthRoute>} />
+      <Route path={ROUTES.SUPPORT} element={<AuthRoute><DashSupport /></AuthRoute>} />
 <Route path={ROUTES.FAQ} element={<UnAuthRoute><Faq /></UnAuthRoute>} />
 <Route path={ROUTES.ABOUT} element={<UnAuthRoute><AboutUs /></UnAuthRoute>} />
       </Routes>

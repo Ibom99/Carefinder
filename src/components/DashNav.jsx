@@ -9,9 +9,14 @@ import Button from './button'
 import { ROUTES } from '../utils/constants'
 import { Link } from 'react-router-dom'
 // import { ImExit } from "react-icons/im";
+import { FaRegWindowClose } from "react-icons/fa";
+import { IoMdMenu } from "react-icons/io";
+import DashHeader from './DashHeader'
 
 
 const DashNav = () => {
+  const [isDashExpanded, setIsDashExpanded] = useState(false);
+  
     const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
 
@@ -26,6 +31,43 @@ const DashNav = () => {
 
   return (
     <div className='dash-nav-container'>
+      <div className="m-content-dash">
+        <div className="dash-navicon">
+        <i
+          className="dash-icon"
+          onClick={() => {
+            setIsDashExpanded(!isDashExpanded);
+          }}
+        >
+          {isDashExpanded ? <FaRegWindowClose /> : <IoMdMenu />}
+       
+
+        </i>
+        {/* <p className="dash-logo">Carefinder</p> */}
+        </div>
+        
+        <ul className={isDashExpanded ? "dash-menu expanded" : "dash-menu"}>
+
+          
+          <div className="m-dash-feature">
+        <DashHeader />
+          </div>
+          <Link to={ROUTES.MARKDOWN} className="content-link" ><li>Review Management</li></Link>
+          <Link  className="analysis-link" ><li>Review Analysis</li></Link>
+          
+          <Link to={ROUTES.SUPPORT} className="support-link"><li>Feedback Support</li>
+          </Link>
+         
+      
+          
+          <div className='btn-signoutm'>
+
+<Button loading={loading} className="btn-signout-mble" text='Log Out' onClick={userSignOut}></Button>
+</div>
+        </ul>
+   
+
+      </div>
       <div className='dash-nav-content'>
         <h1 className='dash-title'>Carefinder</h1>
 <ul className='dash-nav'>
@@ -36,7 +78,7 @@ const DashNav = () => {
      <li ><Link to={ROUTES.MARKDOWN} className='management-route'>Review Management</Link></li>
      <li>Review Analysis</li>
 {/* <li></li> */}
-    <li>Feedback/ User Support</li>
+    <li><Link to={ROUTES.SUPPORT}className='support-route'>Feedback Support</Link></li>
 </ul>
 <div className='signout-btn'>
 

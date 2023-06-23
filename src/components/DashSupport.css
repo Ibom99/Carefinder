@@ -1,0 +1,39 @@
+.support-container{
+    width: 100vw;
+    height: 100vh;
+    /* background-color:#E3F2FD ; */
+    display: flex;
+}
+.support-content{
+    margin: 10px;
+    width: 69vw;
+    
+    
+}
+.status-btn{
+    border: none;
+    border-radius: 10px;
+    padding: 0.4rem;
+    font-size: 0.7rem;
+}
+.status-btn:hover{
+    cursor: pointer;
+    
+}
+.support-table{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+
+@media only screen and (max-width: 1100px){
+    .support-container{
+        flex-direction: column;
+    }
+    .support-header{
+        display: none;
+    }
+    .support-content{
+        width: 95vw;
+        margin: 0 auto;
+    }
+}

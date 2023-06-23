@@ -115,8 +115,10 @@ const Reviews = () => {
           ) : (
       (filteredReviews.length > 0 ? filteredReviews : allReviews).map(review => (
             <div className='review-card' key={review.id}>
+              <div className='name-date'>
               <p className='hospital-name'><b> {review.hospitalName}</b></p>
-              {/* <p>{review.createdAt}</p> */}
+              <p>{review.createdAt.toDate().toLocaleDateString()}</p>
+              </div>
               <p dangerouslySetInnerHTML={{__html: review.review}}></p>
               <p><b>Link:</b> {review.link}</p>
               <p><b>Contact Details:</b> {review.contact} </p>

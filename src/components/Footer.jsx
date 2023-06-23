@@ -2,8 +2,51 @@ import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../utils/constants'
+import { v4 as uuidv4 } from 'uuid';
+import { db } from '../firebase'
+import { collection, addDoc } from 'firebase/firestore'
+import { useState } from 'react';
+
 
 const Footer = () => {
+
+  const [email, setEmail] = useState('');
+const [feedback, setFeedback] = useState('');
+const [feedbackSent, setFeedbackSent] = useState(false);
+
+const handleEmailChange = (e) => {
+  setEmail(e.target.value);
+  // console.log(e.target.value)
+};
+
+const handleFeedbackChange = (e) => {
+  setFeedback(e.target.value);
+};
+
+const handleSend = async () => {
+  try {
+    const payload = {
+      email,
+      feedback,
+      id: uuidv4(),
+      createdAt: new Date(),
+    };
+
+    await addDoc(collection(db, 'supports'), payload);
+    setEmail('');
+    setFeedback('');
+
+    console.log('Feedback sent successfully!');
+    setFeedbackSent(true);
+  } catch (error) {
+    console.error('Error sending feedback: ', error);
+  }
+};
+const handleInputFocus = () => {
+  setFeedbackSent(false);
+};
+
+
   return (
     <div className='footer-container'>
         <h1 className='footer-title'>Carefinder</h1>
@@ -32,12 +75,22 @@ const Footer = () => {
 
 <div className='footer-support'>
     <h2 className='support-title'>Need assitance or have a complaint?</h2>
-    <p className='support-desc'><em>Drop your feedback or complaint down below!</em></p>
+    <p className='support-desc'><em>Drop your feedback down below!</em></p>
+
 <label className='support-label'>Email:</label>
-<input type='email' placeholder='Enter email...' className='support-input' />
+<input type='email' placeholder='Enter email...' className='support-input' value={email}
+  onChange={handleEmailChange} onFocus={handleInputFocus}/>
+
 <label className='support-label'>Feedback/Report:</label>
-<textarea rows="5" type='text' placeholder='Enter remark...' className='support-input' />
-<button className='support-btn'>Send</button>
+<textarea rows="5" type='text' placeholder='Enter feedback...' className='support-input' value={feedback}
+  onChange={handleFeedbackChange} onFocus={handleInputFocus}/>
+
+<button className='support-btn' onClick={handleSend}>Send</button>
+
+{feedbackSent && (
+            <p className='feedback-success'>Thank you for your feedback! <br></br>It'll be responded to as soon as possible.</p>
+          )}
+
 </div>
         </div>
       

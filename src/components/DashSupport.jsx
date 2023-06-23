@@ -1,0 +1,123 @@
+import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore'
+import DashHeader from './DashHeader'
+import DashNav from './DashNav'
+import './DashSupport.css'
+import { BsTrash3 } from 'react-icons/bs'
+
+import React, { useEffect, useState } from 'react'
+import { db } from '../firebase'
+
+const DashSupport = () => {
+    const [feedbacks, setFeedbacks] = useState([]);
+    const [loading, setLoading] = useState(true);
+    // const [buttonColor, setButtonColor] = useState('#FFCCCB');
+//   const [buttonText, setButtonText] = useState('Pending');
+  
+    const fetchSupports = async () => {
+      try {
+        const supportsRef = collection( db, 'supports');
+        const snapshots = await getDocs (supportsRef);
+        const supportsData = snapshots.docs.map(doc => doc.data());
+        setFeedbacks(supportsData);
+        setLoading(false); // Set loading to false after fetching data
+      } catch (error) {
+        console.log('Error fetching feedbacks:', error);
+      }
+    };
+
+    const handleDelete = async (feedbackId) => {
+        try {
+          const supportRef = doc(db, 'supports', feedbackId);
+          await deleteDoc(supportRef);
+          // Remove the deleted feedback from the state
+          setFeedbacks((prevFeedbacks) => prevFeedbacks.filter((feedback) => feedback.id !== feedbackId));
+          console.log('Feedback deleted successfully');
+        } catch (error) {
+          console.log('Error deleting feedback:', error);
+        }
+      };
+
+    const handleButtonClick = (feedbackId) => {
+        // Find the feedback with the given id
+        const updatedFeedbacks = feedbacks.map((feedback) => {
+          if (feedback.id === feedbackId) {
+            return { ...feedback, resolved: true };
+          }
+          return feedback;
+        });
+    
+        setFeedbacks(updatedFeedbacks);
+      };
+    
+    
+    useEffect(() => {
+      fetchSupports();
+    }, []);
+  
+
+  return (
+    <div className='support-container'>
+      <DashNav />
+      <div className='support-content'>
+        {/* <h1>User Support</h1> */}
+        <div className='support-table'>
+        {loading ? (
+            <div className="loader">Loading...</div>
+          ) : (
+          <table className='feedback-table'>
+
+          
+        <thead>
+      <tr>
+        <th>Ticket No.</th>
+        <th>Email</th>
+        <th>Feedback</th>
+        <th>Status</th>
+        <th>Date/Time Added</th>
+      </tr>
+    </thead>
+    <tbody>
+        {feedbacks.map(feedback => (
+  <tr key={feedback.id}>
+  <td>{feedback.id
+  ?.toUpperCase()}</td>
+  
+  <td >{feedback.email}</td>
+  <td>
+    {feedback.feedback}
+  </td>
+  <td>
+  <button
+                        className='status-btn'
+                        style={{ backgroundColor: feedback.resolved ? '#EDFFCC' : '#FFCCCB' }}
+                        onClick={() => handleButtonClick(feedback.id)}
+                        disabled={feedback.resolved}
+                      >
+                        {feedback.resolved ? 'Resolved' : 'Pending'}
+                      </button>
+  </td>
+    <td>{feedback.createdAt?.toDate().toString()}</td>
+
+    <td> <button   className="delete-btn"
+                        onClick={() => handleDelete(feedback.id)}
+                      >
+                       <BsTrash3 />
+                      </button></td>
+
+</tr> 
+
+))}
+</tbody>
+</table>
+ )}
+        </div>
+
+      </div>
+      <div className='support-header'>
+      <DashHeader />
+      </div>
+    </div>
+  )
+}
+
+export default DashSupport
