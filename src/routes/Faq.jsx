@@ -4,6 +4,8 @@ import NavBar from '../components/NavBar'
 import { BsPlusSquareDotted } from "react-icons/bs";
 import { BsXSquare} from "react-icons/bs";
 import Footer from '../components/Footer';
+import { ROUTES } from '../utils/constants';
+import { Helmet } from 'react-helmet-async';
 
 const Faq = () => {
     const [isActive, setIsActive] = useState(false)
@@ -64,6 +66,11 @@ const Faq = () => {
 
   return (
     <div className='faq-container'>
+        <Helmet>
+        <title>FAQs Page</title>
+        <meta name='description' content='Welcome to Carefinder frequently asked questions page' />
+        <link rel='canonical' href={ROUTES.FAQ} />
+      </Helmet>
       <div className='faq-content'>
         <div className='faq-nav'>
             <NavBar />

@@ -1,0 +1,33 @@
+.notfound-container{
+    background-image: url(https://res.cloudinary.com/dzzohccd8/image/upload/v1687609935/DEV%20Images/jean-philippe-delberghe-75xPHEQBmvA-unsplash_imtnjd.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    
+}
+.notfound-content{
+    display: flex;
+    /* background-color: antiquewhite; */
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
+    width: 100vw;
+    text-align: center;
+}
+.notfound-home{
+    text-decoration: none;
+    color:#0D47A1 ;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.5rem;
+}
+@media only screen and (max-width: 1100px){
+.notfound-content{
+    padding: 5rem;
+}
+.notfound-content h1{
+    font-size: 1rem;
+}
+
+}

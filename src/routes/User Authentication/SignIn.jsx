@@ -9,6 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { MdOutlineWavingHand } from "react-icons/md";
 import { createUserDocumentFromAuth } from '../../firebase';
 import "./SignIn.css"
+import { Helmet } from 'react-helmet-async';
 
 
 const SignIn = () => {
@@ -56,6 +57,11 @@ const SignIn = () => {
 
   return (
     <div className='signin-container'>
+      <Helmet>
+        <title>Carefinder Sign In Page</title>
+        <meta name='description' content='Welcome to Carefinder sign in page' />
+        <link rel='canonical' href={ROUTES.SIGN_IN} />
+      </Helmet>
       <div className='signin-content'>
         <div className='carefinder-image'>
           <div className='signin-desc'>

@@ -3,6 +3,8 @@ import "./BMICalculator.css"
 import { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { ROUTES } from '../utils/constants';
 
 
 const BMICalculator = () => {
@@ -40,6 +42,11 @@ const BMICalculator = () => {
 
   return (
     <div className='bmi-container'>
+      <Helmet>
+        <title>BMI Calculator Page</title>
+        <meta name='description' content='Welcome to Carefinder BMI Calculator page' />
+        <link rel='canonical' href={ROUTES.BMI} />
+      </Helmet>
 <div className='bmi-navigation'>
 <NavBar />
 </div>

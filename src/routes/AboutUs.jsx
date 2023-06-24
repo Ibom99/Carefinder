@@ -5,10 +5,17 @@ import "./AboutUs.css"
 import { IoMdPeople } from "react-icons/io";
 import { VscNotebook } from "react-icons/vsc";
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { ROUTES } from '../utils/constants';
 
 const AboutUs = () => {
   return (
     <div className='about-container'>
+      <Helmet>
+        <title>Carefinder About Us Page</title>
+        <meta name='description' content='Welcome to Carefinder About Us page' />
+        <link rel='canonical' href={ROUTES.ABOUT} />
+      </Helmet>
       <div className='about-nav'>
 <NavBar />
       </div>

@@ -12,6 +12,8 @@ import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import ReviewsSearchBar from '../components/ReviewsSearchBar'
 import Footer from '../components/Footer'
+import { ROUTES } from '../utils/constants'
+import { Helmet } from 'react-helmet-async'
 // import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 
 
@@ -96,6 +98,11 @@ const Reviews = () => {
 
   return (
     <div className='review-container'>
+      <Helmet>
+        <title>Hospital Reviews Page</title>
+        <meta name='description' content='Welcome to Carefinder hospital reviews page' />
+        <link rel='canonical' href={ROUTES.REVIEWS} />
+      </Helmet>
       <div className="navigation">
         <NavBar />
       </div>

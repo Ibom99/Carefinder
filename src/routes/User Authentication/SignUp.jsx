@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ROUTES } from '../../utils/constants'
 import Button from '../../components/button'
+import { Helmet } from 'react-helmet-async'
 // import AuthDetails from './AuthDetails'
 
 
@@ -35,7 +36,11 @@ const SignUp = () => {
 
   return (
     <div className='signup-container'>
-
+<Helmet>
+        <title>Carefinder Sign Up Page</title>
+        <meta name='description' content='Welcome to Carefinder sign up page' />
+        <link rel='canonical' href={ROUTES.SIGN_UP} />
+      </Helmet>
       <div className='signup-content'>
       <div className='carefinder-image'>
 <div className='signup-desc'>

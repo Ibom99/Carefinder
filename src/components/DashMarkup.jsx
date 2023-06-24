@@ -6,6 +6,8 @@ import "./DashMarkup.css"
 import DashNav from './DashNav'
 import DashHeader from './DashHeader'
 import { BsTrash3 } from 'react-icons/bs'
+import { Helmet } from 'react-helmet-async';
+import { ROUTES } from '../utils/constants';
 
 
 const DashMarkup = () => {
@@ -42,6 +44,11 @@ const DashMarkup = () => {
 
   return (
     <div className='dash-markup-container'>
+      <Helmet>
+        <title>Carefinder Admin Review Management Page</title>
+        <meta name='description' content='Welcome to Carefinder Admin review management page' />
+        <link rel='canonical' href={ROUTES.MARKDOWN} />
+      </Helmet>
       <DashNav />
         <div className='dash-markup-content'>
         

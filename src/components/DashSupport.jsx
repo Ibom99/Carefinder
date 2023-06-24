@@ -6,6 +6,8 @@ import { BsTrash3 } from 'react-icons/bs'
 
 import React, { useEffect, useState } from 'react'
 import { db } from '../firebase'
+import { Helmet } from 'react-helmet-async'
+import { ROUTES } from '../utils/constants'
 
 const DashSupport = () => {
     const [feedbacks, setFeedbacks] = useState([]);
@@ -57,6 +59,11 @@ const DashSupport = () => {
 
   return (
     <div className='support-container'>
+      <Helmet>
+        <title>Carefinder User Support Page</title>
+        <meta name='description' content='Welcome to Carefinder user support page' />
+        <link rel='canonical' href={ROUTES.SUPPORT} />
+      </Helmet>
       <DashNav />
       <div className='support-content'>
         {/* <h1>User Support</h1> */}
