@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { db } from '../firebase'
 import { collection, addDoc } from 'firebase/firestore'
 import { useState } from 'react';
+import Validation from './Validation';
 
 
 const Footer = () => {
@@ -13,6 +14,7 @@ const Footer = () => {
   const [email, setEmail] = useState('');
 const [feedback, setFeedback] = useState('');
 const [feedbackSent, setFeedbackSent] = useState(false);
+const [errors, setErrors] = useState({})
 
 const handleEmailChange = (e) => {
   setEmail(e.target.value);
@@ -22,6 +24,16 @@ const handleEmailChange = (e) => {
 const handleFeedbackChange = (e) => {
   setFeedback(e.target.value);
 };
+
+const handleValidation = (e) => {
+  e.preventDefault();
+  const validationErrors = Validation(email, feedback);
+  setErrors(validationErrors);
+  if (Object.keys(validationErrors).length === 0) {
+    handleSend();
+  }
+}
+
 
 const handleSend = async () => {
   try {
@@ -35,7 +47,8 @@ const handleSend = async () => {
     await addDoc(collection(db, 'supports'), payload);
     setEmail('');
     setFeedback('');
-
+    setErrors({});
+// handleValidation()
     console.log('Feedback sent successfully!');
     setFeedbackSent(true);
   } catch (error) {
@@ -77,15 +90,25 @@ const handleInputFocus = () => {
     <h2 className='support-title'>Need assitance or have a complaint?</h2>
     <p className='support-desc'><em>Drop your feedback down below!</em></p>
 
+<form className="validation-form" onSubmit={handleValidation}>
 <label className='support-label'>Email:</label>
 <input type='email' placeholder='Enter email...' className='support-input' value={email}
   onChange={handleEmailChange} onFocus={handleInputFocus}/>
+  <div className='error-message'>
+  {errors.email && <p className="error-message-input" style={{color: "red"}}>{errors.email}</p>}
+  </div>
+ 
 
 <label className='support-label'>Feedback/Report:</label>
 <textarea rows="5" type='text' placeholder='Enter feedback...' className='support-input' value={feedback}
   onChange={handleFeedbackChange} onFocus={handleInputFocus}/>
+  <div className='error-message'>
+  {errors.feedback && <p  style={{color: "red"}}>{errors.feedback}</p>}
+  </div>
+  
+<button type='submit' className='support-btn' >Send</button>
+</form>
 
-<button className='support-btn' onClick={handleSend}>Send</button>
 
 {feedbackSent && (
             <p className='feedback-success'>Thank you for your feedback! <br></br>It'll be responded to as soon as possible.</p>

@@ -1,0 +1,15 @@
+.analysis-container{
+    display: flex;
+}
+
+
+
+
+@media only screen and (max-width: 1100px){
+    .analysis-header{
+        display: none;
+    }
+    .analysis-container{
+        flex-direction: column;
+    }
+}

@@ -53,7 +53,7 @@ const DashNav = () => {
         <DashHeader />
           </div>
           <Link to={ROUTES.MARKDOWN} className="content-link" ><li>Review Management</li></Link>
-          <Link  className="analysis-link" ><li>Review Analysis</li></Link>
+          <Link to={ROUTES.ANALYSIS} className="analysis-link" ><li>Review Analysis</li></Link>
           
           <Link to={ROUTES.SUPPORT} className="support-link"><li>Feedback Support</li>
           </Link>

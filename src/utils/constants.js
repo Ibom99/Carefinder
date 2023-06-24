@@ -8,7 +8,8 @@ export const ROUTES = {
   MARKDOWN: '/content_management',
   FAQ: '/faq',
   ABOUT: '/about_us',
-  SUPPORT: '/feedback_management'
+  SUPPORT: '/feedback_management',
+  ANALYSIS: '/review_analysis'
 
 
 }

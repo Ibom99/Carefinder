@@ -12,6 +12,7 @@ const BMICalculator = () => {
   const [mass, setMass] = useState("");
   const [bmi, setBmi] = useState("");
   const [bmiRange, setBMIRange]= useState("");
+  
 
   const calculate = (e) => {
     e.preventDefault();

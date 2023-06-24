@@ -17,6 +17,7 @@ import Faq from "./routes/Faq";
 import AboutUs from "./routes/AboutUs";
 import DashSupport from "./components/DashSupport";
 import NotFound from "./routes/NotFound";
+import DashAnalysis from "./components/DashAnalysis";
 
 function App() {
 // const [results, setResults] = useState([])
@@ -35,6 +36,9 @@ function App() {
       <Route path={ROUTES.BMI} element={<UnAuthRoute><BMICalculator /></UnAuthRoute>} />
       <Route path={ROUTES.MARKDOWN} element={<AuthRoute><DashMarkup /></AuthRoute>} />
       <Route path={ROUTES.SUPPORT} element={<AuthRoute><DashSupport /></AuthRoute>} />
+      
+      <Route path={ROUTES.ANALYSIS} element={<AuthRoute><DashAnalysis /></AuthRoute>} />
+
 <Route path={ROUTES.FAQ} element={<UnAuthRoute><Faq /></UnAuthRoute>} />
 <Route path={ROUTES.ABOUT} element={<UnAuthRoute><AboutUs /></UnAuthRoute>} />
 

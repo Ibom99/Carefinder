@@ -1,5 +1,8 @@
 .review-container{
     /* background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%); */
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 1%, #e3f2fd 78%, #e3f2fd 100%);
+    
     height: fit-content;
 }
 
@@ -37,11 +40,12 @@
 .review-card{
     /* width: 20rem; */
     /* height: 10rem; */
-    /* background-color: white; */
+    background-color: white;
+
     padding: 1rem;
     height: 15rem;
     border-radius: 10px;
-    box-shadow: 0px 0px 8px #ddd;
+    box-shadow: 0px 0px 8px #BBDEFB;
     
     
 }
@@ -153,5 +157,8 @@ padding: 2rem;
         justify-content: center;
         margin: 0 auto;
     
+    }
+    .enter-review-title{
+        padding: 1rem;
     }
 }

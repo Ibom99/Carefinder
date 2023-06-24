@@ -64,7 +64,7 @@ height: 100vh;
     margin-top: 0.4rem;
 }
 .auth-email{
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #c0c5c9;
@@ -72,7 +72,7 @@ height: 100vh;
 }
 .auth-password{
     border-radius: 5px;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
     padding: 10px;
     border: 1px solid #c0c5c9;
     margin-top: 0.4rem;

@@ -73,7 +73,7 @@
 .support-input{
     padding: 0.4rem;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    
     margin-top: 0.3rem;
 }
 .support-btn{
@@ -89,6 +89,17 @@
     background-color: #a7d4fa;
     color: black;
     transition: 0.4s;
+}
+.validation-form{
+    display: flex;
+    flex-direction: column;
+}
+.error-message{
+    margin-bottom: 1rem;
+    text-align: end;
+}
+.error-message-input{
+    text-align: end;
 }
 .feedback-success{
     text-align: center;
