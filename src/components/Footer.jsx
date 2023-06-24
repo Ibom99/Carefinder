@@ -35,7 +35,8 @@ const handleValidation = (e) => {
 }
 
 
-const handleSend = async () => {
+const handleSend = async (e) => {
+  // e.preventDefault();
   try {
     const payload = {
       email,
@@ -47,13 +48,14 @@ const handleSend = async () => {
     await addDoc(collection(db, 'supports'), payload);
     setEmail('');
     setFeedback('');
-    setErrors({});
+    // setErrors({});
 // handleValidation()
     console.log('Feedback sent successfully!');
     setFeedbackSent(true);
   } catch (error) {
     console.error('Error sending feedback: ', error);
   }
+
 };
 const handleInputFocus = () => {
   setFeedbackSent(false);

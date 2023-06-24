@@ -34,6 +34,7 @@ const DashSupport = () => {
           // Remove the deleted feedback from the state
           setFeedbacks((prevFeedbacks) => prevFeedbacks.filter((feedback) => feedback.id !== feedbackId));
           console.log('Feedback deleted successfully');
+          console.log(feedbackId)
         } catch (error) {
           console.log('Error deleting feedback:', error);
         }

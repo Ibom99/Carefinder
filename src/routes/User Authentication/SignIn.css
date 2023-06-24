@@ -137,17 +137,17 @@ font-size: 0.8rem;
     color:#1E88E5;
     text-decoration: none;
 }
-.input-error-message{
+/* .input-error-message{
     text-align: start;
     margin-bottom: 1rem;
     font-size: 0.6rem;
-}
-.password-error-message{
+} */
+/* .password-error-message{
     text-align: start;
     font-size: 0.6rem;
-    /* background-color: antiquewhite; */
+    /* background-color: antiquewhite; 
 width: 70%;
-}
+} */
 
 .signup-text{
     text-align: center;
@@ -159,7 +159,7 @@ width: 70%;
     font-size: 0.7rem;
     margin-bottom: 1.5rem;
     color:#1E88E5;
-    width: 30%;
+    /* width: 30%; */
 
 }
 .password-extra{

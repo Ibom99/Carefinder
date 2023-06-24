@@ -10,7 +10,7 @@ import { MdOutlineWavingHand } from "react-icons/md";
 import { createUserDocumentFromAuth } from '../../firebase';
 import "./SignIn.css"
 import { Helmet } from 'react-helmet-async';
-import Validation from '../../components/Validation';
+
 
 
 const SignIn = () => {
@@ -18,7 +18,7 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState({})
+  // const [errors, setErrors] = useState({})
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -32,7 +32,7 @@ const SignIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((data) => {
         getDataFromFirebase(data);
-    setErrors({});
+    // setErrors({});
 
       })
       .catch((error) => {
@@ -40,14 +40,14 @@ const SignIn = () => {
         setLoading(false);
       });
   };
-  const handleValidation = (e) => {
-    e.preventDefault();
-    const validationErrors = Validation(email, password);
-    setErrors(validationErrors);
-    if (Object.keys(validationErrors).length === 0) {
-      signIn();
-    }
-  }
+  // const handleValidation = (e) => {
+  //   e.preventDefault();
+  //   const validationErrors = Validation(email, password);
+  //   setErrors(validationErrors);
+  //   if (Object.keys(validationErrors).length === 0) {
+  //     signIn();
+  //   }
+  // }
   
 
   const signInWithGooglePopup = () => {
@@ -90,7 +90,7 @@ const SignIn = () => {
           </div>
         </div>
         <div className='signin-form'>
-          <form onSubmit={handleValidation}>
+          <form onSubmit={signIn}>
             <h1 className='carefinder-logo'><Link className='carefinder-link' to={ROUTES.LANDING}>Carefinder</Link></h1>
             <h1 className='login-title'>
               Hey, hello <i className='waving-icon'><MdOutlineWavingHand /> </i>
@@ -99,24 +99,24 @@ const SignIn = () => {
 
             <label htmlFor="email">Email</label>
             <input id="email" className="auth-email" type='email' placeholder='Enter email' value={email} onChange={(e) => setEmail(e.target.value)} />
-            <div className='input-error-message'>
+            {/* <div className='input-error-message'>
   {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
   </div>
- 
+  */}
 
             <label htmlFor="password">Password</label>
             <input id="password" className="auth-password"
             type={showPassword ? 'text' : 'password'} placeholder='Enter password' value={password} onChange={(e) => setPassword(e.target.value)} />
-<div className='password-extra'>
+{/* <div className='password-extra'>
 <p className='password-error-message'>
   {errors.password && <span style={{color: "red"}}>{errors.password}</span>}
-  </p>
+  </p> */}
 
             <p className='show-password' onClick={togglePasswordVisibility}>
         {showPassword ? 'Hide Password' : 'Show Password'}
       </p>
-      
-</div>
+{/*       
+</div> */}
     
 
             <Button loading={loading} className="login-btn" text='Login' type='submit' />

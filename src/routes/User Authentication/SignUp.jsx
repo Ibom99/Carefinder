@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ROUTES } from '../../utils/constants'
 import Button from '../../components/button'
 import { Helmet } from 'react-helmet-async'
-import Validation from '../../components/Validation'
+// import {signUpValidation} from '../../components/Validation'
 // import AuthDetails from './AuthDetails'
 
 
@@ -17,7 +17,7 @@ const SignUp = () => {
     const [username, setUsername] = useState("") 
     const [loading, setLoading] = useState(false)
     const [showPassword, setShowPassword] = useState(false);
-    const [errors, setErrors] = useState({})
+    // const [errors, setErrors] = useState({})
 
     const navigate = useNavigate()
 
@@ -34,7 +34,7 @@ const SignUp = () => {
       console.log(operationType, 'this is a OPERATION TYPE')
       console.log(user, 'this is a user object')
         createUserDocumentFromAuth(user, {username})
-        setErrors({});
+        // setErrors({});
         navigate(ROUTES.SIGN_IN)
    
 
@@ -43,14 +43,14 @@ const SignUp = () => {
         setLoading(false)
       })
     } 
-    const handleValidation = (e) => {
-      e.preventDefault();
-      const validationErrors = Validation(email, password, username);
-      setErrors(validationErrors);
-      if (Object.keys(validationErrors).length === 0) {
-        signUp();
-      }
-    }
+    // const signUpValidated = (e) => {
+    //   e.preventDefault();
+    //   const validationErrors = signUpValidation(email, password, username);
+    //   setErrors(validationErrors);
+    //   if (Object.keys(validationErrors).length === 0) {
+    //     signUp();
+    //   }
+    // }
 
   return (
     <div className='signup-container'>
@@ -72,7 +72,7 @@ const SignUp = () => {
 <div className='signup-form'>
 
 
-      <form onSubmit={handleValidation}>
+      <form onSubmit={signUp}>
       <h1 className='carefinder-logo' ><Link className='carefinder-link' to={ROUTES.LANDING}>Carefinder</Link></h1>
         <h1 className='signup-title'>
             Create an account
@@ -80,32 +80,32 @@ const SignUp = () => {
 
         <label htmlFor='username'>Username</label>
         <input id="username" className='auth-username' type='text'placeholder='Enter username' value={username} onChange={(e) => setUsername(e.target.value)}></input>
-        <div className='username-error-message'>
+        {/* <div className='username-error-message'>
         {errors.username && <p style={{color: "red"}}>{errors.username}</p>}
-        </div>
+        </div> */}
         
         
 
         <label htmlFor='email'>Email</label>
         <input className="auth-email" type='email'placeholder='Enter email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
-        <div className='input-error-message'>
+        {/* <div className='input-error-message'>
   {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
-  </div>
+  </div> */}
 
         <label htmlFor='password'>Password</label>
 
         <input className="auth-password" type={showPassword ? 'text' : 'password'} placeholder='Enter password'  value={password} onChange={(e) => setPassword(e.target.value)} />
 
-        <div className='password-extra'>
-<p className='password-error-message'>
+        {/* <div className='password-extra'> */}
+{/* <p className='password-error-message'>
   {errors.password && <span style={{color: "red"}}>{errors.password}</span>}
-  </p>
+  </p> */}
 
             <p className='show-password' onClick={togglePasswordVisibility}>
         {showPassword ? 'Hide Password' : 'Show Password'}
       </p>
       
-</div>
+
 
         <Button loading={loading} className="signup-btn" text='Sign Up' type='submit' />
       </form>
