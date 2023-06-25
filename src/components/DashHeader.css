@@ -42,4 +42,9 @@
         /* margin-bottom: 1rem; */
         padding-top: 0rem;
     }
+    .auth-state{
+        /* background-color: antiquewhite; */
+        width: 70%;
+        margin: 0 auto;
+    }
 }

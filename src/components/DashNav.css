@@ -9,7 +9,7 @@ color: #0D47A1;
 font-family: 'Kaushan Script', cursive;
 }
 .dash-nav-content{
-    margin: 10px;
+    /* margin: 10px; */
     /* background-color: white; */
     display: flex;
     flex-direction: column;
@@ -41,6 +41,10 @@ border-radius: 5px;
     color: black;
 }
 .support-route{
+    text-decoration: none;
+    color: black;
+}
+.analysis-route{
     text-decoration: none;
     color: black;
 }

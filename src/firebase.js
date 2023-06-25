@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc, getDocs, deleteDoc } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -82,3 +82,18 @@ export const createReviewDocument = async (
 
   return reviewDocRef;
 };
+
+export const deleteSupport= async (feedbackId) => {
+  try {
+    const supportRef = doc(db, 'supports', feedbackId);
+    const res = await deleteDoc(supportRef);
+
+    return res;
+
+    // Remove the deleted feedback from the state
+    
+    // console.log(feedbackId)
+  } catch (error) {
+    console.log('Error deleting feedback:', error);
+  }
+}

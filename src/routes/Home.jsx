@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
 import { ROUTES } from "../utils/constants";
 
+
 const Home = () => {
   const [results, setResults] = useState([]);
 

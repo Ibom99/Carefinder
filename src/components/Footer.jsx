@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../utils/constants'
@@ -6,7 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { db } from '../firebase'
 import { collection, addDoc } from 'firebase/firestore'
 import { useState } from 'react';
-import Validation from './Validation';
+import { Validation } from './Validation';
+import Button from './button';
 
 
 const Footer = () => {
@@ -18,18 +19,23 @@ const [errors, setErrors] = useState({})
 
 const handleEmailChange = (e) => {
   setEmail(e.target.value);
-  // console.log(e.target.value)
 };
 
 const handleFeedbackChange = (e) => {
   setFeedback(e.target.value);
 };
 
+// const handleChange = (e)=> {
+//   const {name, value}= e
+//   setFormData({...formData, [name]: value})
+// }
+
 const handleValidation = (e) => {
   e.preventDefault();
-  const validationErrors = Validation(email, feedback);
-  setErrors(validationErrors);
-  if (Object.keys(validationErrors).length === 0) {
+  const validationErrors = Validation(email,"", feedback);
+  if(validationErrors){
+    setErrors(validationErrors);
+  } else {
     handleSend();
   }
 }
@@ -60,6 +66,10 @@ const handleSend = async (e) => {
 const handleInputFocus = () => {
   setFeedbackSent(false);
 };
+
+useEffect(()=> {
+  if(email || feedback) setErrors({})
+}, [email, feedback])
 
 
   return (
@@ -108,7 +118,8 @@ const handleInputFocus = () => {
   {errors.feedback && <p  style={{color: "red"}}>{errors.feedback}</p>}
   </div>
   
-<button type='submit' className='support-btn' >Send</button>
+<button type='submit' className='support-btn'>Send</button>
+
 </form>
 
 

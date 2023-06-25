@@ -1,16 +1,55 @@
  
- const Validation = (email, feedback) =>{
-    const errors = {};
+ export const Validation = (email, password, feedback, username ) =>{
+    let error = {};
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    // const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+
+      const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+
   
     if (email === "") {
-      errors.email = "Email is required!";
+      error.email = "Email is required!";
     } else if (!emailPattern.test(email)) {
-      errors.email = "Invalid email address!";
-    }
+      error.email = "Invalid email address!";
+    } 
+
+    if (password === "") {
+          error.password = "Password is required!";
+        } else if (!passwordPattern.test(password)) {
+          error.password =
+            "Password must be at least 8 characters long, contain at least ONE LOWERCASE LETTER, ONE UPPERCASE LETTER, and ONE DIGIT!";
+        }
     
-    // if (username === "") {
+    if (feedback === "") {
+      error.feedback = "Feedback is required!";
+    }
+
+       if (username === "") {
+        error.username = "Username is required!";
+      }
+
+    return error;
+  }
+
+  // export const signUpValidation = (email, password) =>{
+  //   const errors = {};
+  //   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  
+    
+ 
+  //   if (email === "") {
+  //     errors.email = "Email is required!";
+  //   } else if (!emailPattern.test(email)) {
+  //     errors.email = "Invalid email address!";
+  //   }
+    
+
+
+  //  
+    
+  // }
+  
+  
+   // if (username === "") {
     //   errors.username = "Username is required!";
     // }
     // if (hospitalName === "") {
@@ -22,49 +61,10 @@
     // if (mass === "") {
     //   errors.mass = "Mass is required!";
     // }
-    if (feedback === "") {
-      errors.feedback = "Feedback is required!";
-    }
-  
-    // if (password === "") {
+   // if (password === "") {
     //   errors.password = "Password is required!";
     // } else if (!passwordPattern.test(password)) {
     //   errors.password =
     //     "Password must be at least 8 characters long, contain at least ONE LOWERCASE LETTER, ONE UPPERCASE LETTER, and ONE DIGIT!";
     // }
-    
-  
-    return errors;
-  }
-export default Validation
-  // export const signUpValidation = (email, password) =>{
-  //   const errors = {};
-  //   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  //   const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
-
-    
-  //   if (username === "") {
-  //       errors.username = "Username is required!";
-  //     }
-
-  //   if (email === "") {
-  //     errors.email = "Email is required!";
-  //   } else if (!emailPattern.test(email)) {
-  //     errors.email = "Invalid email address!";
-  //   }
-    
-
-
-  //   if (password === "") {
-  //     errors.password = "Password is required!";
-  //   } else if (!passwordPattern.test(password)) {
-  //     errors.password =
-  //       "Password must be at least 8 characters long, contain at least ONE LOWERCASE LETTER, ONE UPPERCASE LETTER, and ONE DIGIT!";
-  //   }
-    
-  // }
-  
-  
-  
- 
  

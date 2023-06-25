@@ -1,11 +1,11 @@
-import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore'
+import { collection, deleteDoc, doc, getDoc, getDocs } from 'firebase/firestore'
 import DashHeader from './DashHeader'
 import DashNav from './DashNav'
 import './DashSupport.css'
 import { BsTrash3 } from 'react-icons/bs'
 
 import React, { useEffect, useState } from 'react'
-import { db } from '../firebase'
+import { db, deleteSupport } from '../firebase'
 import { Helmet } from 'react-helmet-async'
 import { ROUTES } from '../utils/constants'
 
@@ -19,7 +19,9 @@ const DashSupport = () => {
       try {
         const supportsRef = collection( db, 'supports');
         const snapshots = await getDocs (supportsRef);
-        const supportsData = snapshots.docs.map(doc => doc.data());
+        const supportsData = snapshots.docs.map(doc => ({ ...doc.data(), doc_id: doc.id}));
+        
+        
         setFeedbacks(supportsData);
         setLoading(false); // Set loading to false after fetching data
       } catch (error) {
@@ -28,16 +30,11 @@ const DashSupport = () => {
     };
 
     const handleDelete = async (feedbackId) => {
-        try {
-          const supportRef = doc(db, 'supports', feedbackId);
-          await deleteDoc(supportRef);
-          // Remove the deleted feedback from the state
-          setFeedbacks((prevFeedbacks) => prevFeedbacks.filter((feedback) => feedback.id !== feedbackId));
-          console.log('Feedback deleted successfully');
-          console.log(feedbackId)
-        } catch (error) {
-          console.log('Error deleting feedback:', error);
-        }
+     const res =  deleteSupport(feedbackId) 
+     if(res){
+      setFeedbacks((prevFeedbacks) => prevFeedbacks.filter((feedback) => feedback.doc_id !== feedbackId));
+      console.log('Feedback deleted successfully');
+    }
       };
 
     const handleButtonClick = (feedbackId) => {
@@ -107,7 +104,7 @@ const DashSupport = () => {
     <td>{feedback.createdAt?.toDate().toString()}</td>
 
     <td> <button   className="delete-btn"
-                        onClick={() => handleDelete(feedback.id)}
+                        onClick={() => handleDelete(feedback.doc_id)}
                       >
                        <BsTrash3 />
                       </button></td>

@@ -76,7 +76,7 @@ const DashNav = () => {
 
     </li> */}
      <li ><Link to={ROUTES.MARKDOWN} className='management-route'>Review Management</Link></li>
-     <li>Review Analysis</li>
+     <li><Link to={ROUTES.ANALYSIS} className='analysis-route' >Review Analysis</Link></li>
 {/* <li></li> */}
     <li><Link to={ROUTES.SUPPORT}className='support-route'>Feedback Support</Link></li>
 </ul>

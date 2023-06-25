@@ -42,7 +42,7 @@ height: 100vh;
 }
 .signup-form{
     display: flex;
-    padding: 4rem;
+    padding: 3rem;
     flex-direction: column;
     margin: 0 auto;
 }
@@ -57,11 +57,17 @@ height: 100vh;
 }
 
 .auth-username{
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #c0c5c9;
     margin-top: 0.4rem;
+}
+.username-error-message{
+    margin-bottom: 1rem;
+    padding: 0.5rem 0rem;
+    font-size: 0.6rem;
+    text-align: end;
 }
 .auth-email{
     /* margin-bottom: 1.5rem; */

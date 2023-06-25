@@ -1,5 +1,24 @@
 .analysis-container{
     display: flex;
+  width: 100vw;
+}
+.analysis-content{
+    width: 67vw;
+    /* margin: 2rem; */
+}
+.analysis-title{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.line-graph{
+    /* background-color: antiquewhite; */
+    width: 60rem;
+    height: 25rem;
+    /* padding: 20px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -11,5 +30,24 @@
     }
     .analysis-container{
         flex-direction: column;
+    }
+    .analysis-content{
+        width: 100vw;
+        /* background-color: bisque; */
+        flex-direction: column;
+        height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 2rem; */
+    }
+    .line-graph{
+        /* background-color: antiquewhite; */
+        width: 85%;
+       
+    }
+    .analysis-title{
+        font-size: 0.9rem;
+        padding: 1rem;
     }
 }
