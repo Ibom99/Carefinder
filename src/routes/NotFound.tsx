@@ -8,7 +8,7 @@ const NotFound : React.FC = () => {
   return (
     <div className='notfound-container'>
       <div className='notfound-navigation'>
-        <NavBar />
+        {/* <NavBar /> */}
       </div>
       <div className='notfound-content'>
       <h1>Oops... you're lost! Page Not Found! </h1>

@@ -131,9 +131,14 @@ font-size: 1.5rem;
 }
 .post-btn:hover{
     cursor: pointer;
-    color: white;
+    /* color: white;
     background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
-    transition: 0.4s;
+    transition: 0.4s;*/ 
+}
+.post-btn:disabled{
+    background-color: #ddd;
+    color: #7b7c7d;
+    cursor: not-allowed;
 }
 .post-btn-container{
 /* background-color: #BBDEFB;  */
