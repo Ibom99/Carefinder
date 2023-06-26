@@ -67,26 +67,36 @@
     padding: 0.5rem;
     border-radius: 5px;
     margin-bottom: 2rem;
+    border: 1px solid #ddd;
  }
+
  .link-input{
     padding: 0.5rem;
 border-radius: 5px;
 margin-bottom: 2rem;
+border: 1px solid #ddd;
+
 
  }
  
  .contact-input{
     padding: 0.5rem;
 border-radius: 5px;
+border: 1px solid #ddd;
+margin-bottom: 2rem;
+
+
  }
 .review-inputs{
     margin: 0 auto;
     display: flex;
-    background-color: #BBDEFB;
-    padding: 1rem;
+    background-color: white;
+    padding: 4rem;
     width: 80vw;
     justify-content: space-between;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 9rem;
+    
 }
 .hospital-name{
 font-size: 1.5rem;
@@ -110,29 +120,30 @@ font-size: 1.5rem;
 
 }
 .post-btn{
-    padding: 6px 12px;
+    padding: 12px 24px;
     border-radius: 5px;
-    background-color: #BBDEFB;
+    background-color: #135a95;
     border: none;
     box-shadow: 0px 0px 8px #ddd;
     font-weight: bold;
+    color: #FFFFFF;
 
 }
 .post-btn:hover{
     cursor: pointer;
     color: white;
-    background-color: #135a95;
+    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
     transition: 0.4s;
 }
 .post-btn-container{
-/* background-color: #BBDEFB; */
-display: flex;
-width: 80vw;
-justify-content: end;
+/* background-color: #BBDEFB;  */
+/* display: flex; */
+/* width: 80vw; */
+/* justify-content: end; */
 margin-bottom: 2rem;
 padding: 2rem;
-/* background-color: #BBDEFB; */
-/* margin: 0 auto; */
+/* background-color: #BBDEFB;  */
+ margin: 0 auto; 
 }
 
 @media only screen and (max-width: 1100px){
@@ -146,11 +157,13 @@ padding: 2rem;
     .review-inputs{
         flex-direction: column;
         width: 90vw;
+        padding: 2rem;
     }
     .set-one{
         width: 100%;
     }
     .set-two{
+        margin-top: 1rem;
         width: 100%;
     }
     .post-btn-container{

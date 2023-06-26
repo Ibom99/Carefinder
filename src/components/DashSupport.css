@@ -20,6 +20,9 @@
     cursor: pointer;
     
 }
+.feedback-table tbody tr:nth-of-type(even) {
+    background-color: #eeeeee;
+}
 /* .feedback-table{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 

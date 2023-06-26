@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
-import { Routes, Route, Navigate, } from "react-router-dom"
-import {ROUTES} from './utils/constants'
+import { Routes, Route, Navigate } from "react-router-dom";
+import { ROUTES } from "./utils/constants";
 import "./App.css";
 import Home from "./routes/Home";
 import Reviews from "./routes/Reviews";
@@ -20,36 +20,111 @@ import NotFound from "./routes/NotFound";
 import DashAnalysis from "./components/DashAnalysis";
 
 function App() {
-// const [results, setResults] = useState([])
-
+  // const [results, setResults] = useState([])
 
   return (
     <div className="App">
-        {/* <ReviewProvider> */}
+      {/* <ReviewProvider> */}
       <Routes>
-        
-      <Route path={ROUTES.LANDING} element={ <UnAuthRoute> <Home /></UnAuthRoute>} />
-      <Route path={ROUTES.REVIEWS} element={<UnAuthRoute> <Reviews  /></UnAuthRoute>} />
-      <Route path={ROUTES.SIGN_IN} element={<UnAuthRoute> <SignIn /></UnAuthRoute>} />
-      <Route path={ROUTES.SIGN_UP} element={ <UnAuthRoute> <SignUp /></UnAuthRoute>} />
-      
-      <Route path={ROUTES.DASHBOARD} element={<AuthRoute><Dashboard/> </AuthRoute>} />
-      <Route path={ROUTES.BMI} element={<UnAuthRoute><BMICalculator /></UnAuthRoute>} />
-      <Route path={ROUTES.MARKDOWN} element={<AuthRoute><DashMarkup /></AuthRoute>} />
-      <Route path={ROUTES.SUPPORT} element={<AuthRoute><DashSupport /></AuthRoute>} />
-      
-      <Route path={ROUTES.ANALYSIS} element={<AuthRoute><DashAnalysis /></AuthRoute>} />
-
-<Route path={ROUTES.FAQ} element={<UnAuthRoute><Faq /></UnAuthRoute>} />
-<Route path={ROUTES.ABOUT} element={<UnAuthRoute><AboutUs /></UnAuthRoute>} />
-
-<Route path="*" element={<NotFound />} />
-<Route
-          path="/"
-          element={<Navigate to="/404" replace />}
+        <Route
+          path={ROUTES.LANDING}
+          element={
+            <UnAuthRoute>
+              {" "}
+              <Home />
+            </UnAuthRoute>
+          }
         />
+        <Route
+          path={ROUTES.REVIEWS}
+          element={
+            <UnAuthRoute>
+              {" "}
+              <Reviews />
+            </UnAuthRoute>
+          }
+        />
+        <Route
+          path={ROUTES.SIGN_IN}
+          element={
+            <UnAuthRoute>
+              {" "}
+              <SignIn />
+            </UnAuthRoute>
+          }
+        />
+        <Route
+          path={ROUTES.SIGN_UP}
+          element={
+            <UnAuthRoute>
+              {" "}
+              <SignUp />
+            </UnAuthRoute>
+          }
+        />
+
+        <Route
+          path={ROUTES.DASHBOARD}
+          element={
+            <AuthRoute>
+              <Dashboard />{" "}
+            </AuthRoute>
+          }
+        />
+        <Route
+          path={ROUTES.BMI}
+          element={
+            <UnAuthRoute>
+              <BMICalculator />
+            </UnAuthRoute>
+          }
+        />
+        <Route
+          path={ROUTES.MARKDOWN}
+          element={
+            <AuthRoute>
+              <DashMarkup />
+            </AuthRoute>
+          }
+        />
+        <Route
+          path={ROUTES.SUPPORT}
+          element={
+            <AuthRoute>
+              <DashSupport />
+            </AuthRoute>
+          }
+        />
+
+        <Route
+          path={ROUTES.ANALYSIS}
+          element={
+            <AuthRoute>
+              <DashAnalysis />
+            </AuthRoute>
+          }
+        />
+
+        <Route
+          path={ROUTES.FAQ}
+          element={
+            <UnAuthRoute>
+              <Faq />
+            </UnAuthRoute>
+          }
+        />
+        <Route
+          path={ROUTES.ABOUT}
+          element={
+            <UnAuthRoute>
+              <AboutUs />
+            </UnAuthRoute>
+          }
+        />
+
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Navigate to="/404" replace />} />
       </Routes>
-      
     </div>
   );
 }

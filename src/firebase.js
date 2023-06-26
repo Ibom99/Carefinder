@@ -3,7 +3,14 @@ import { initializeApp } from "firebase/app";
 
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc, getDocs, deleteDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  getDocs,
+  deleteDoc,
+} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -12,9 +19,8 @@ const firebaseConfig = {
   projectId: "carefinder-app-6e91d",
   storageBucket: "carefinder-app-6e91d.appspot.com",
   messagingSenderId: "485777694081",
-  appId: "1:485777694081:web:b77b0b79cd8a7b02e15c80"
+  appId: "1:485777694081:web:b77b0b79cd8a7b02e15c80",
 };
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -31,8 +37,6 @@ export const signInWithGoogle = () => signInWithPopup(getAuth(), provider);
 // Sign out
 export const signOut = () => getAuth().signOut();
 
-
-
 export const createUserDocumentFromAuth = async (
   userAuth,
   additionalInformation = {}
@@ -41,12 +45,10 @@ export const createUserDocumentFromAuth = async (
   const userDocRef = doc(db, "users", userAuth.uid);
   const userSnapShot = await getDoc(userDocRef);
 
-
   // creating user doc if it dosen't exist
   if (!userSnapShot.exists()) {
     const { email } = userAuth;
     const createdAt = new Date();
-
 
     try {
       await setDoc(userDocRef, {
@@ -59,41 +61,35 @@ export const createUserDocumentFromAuth = async (
     }
   }
 
-
   return userDocRef;
 };
 
-export const createReviewDocument = async (
-  payload
-) => {
+export const createReviewDocument = async (payload) => {
   if (!payload) return;
   const reviewDocRef = doc(db, "reviews", payload.id);
   const reviewSnapShot = await getDoc(reviewDocRef);
 
-
   // creating review doc if it dosen't exist
   try {
-    await setDoc(reviewDocRef, payload
-     );
+    await setDoc(reviewDocRef, payload);
   } catch (error) {
     console.log("error creating user", error.message);
   }
 
-
   return reviewDocRef;
 };
 
-export const deleteSupport= async (feedbackId) => {
+export const deleteSupport = async (feedbackId) => {
   try {
-    const supportRef = doc(db, 'supports', feedbackId);
+    const supportRef = doc(db, "supports", feedbackId);
     const res = await deleteDoc(supportRef);
 
     return res;
 
     // Remove the deleted feedback from the state
-    
+
     // console.log(feedbackId)
   } catch (error) {
-    console.log('Error deleting feedback:', error);
+    console.log("Error deleting feedback:", error);
   }
-}
+};

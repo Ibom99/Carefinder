@@ -1,7 +1,9 @@
 .dash-header-container{
     width: 13vw;
     height: 100vh;
-    background-color:#E3F2FD ;
+    background-color:white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
     /* border-left: 1px solid #0D47A1; */
 }
 .dash-header-content{

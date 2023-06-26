@@ -31,11 +31,14 @@
 .reviews-table{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+thead{
+    background-color: #E3F2FD;
+
+}
 th{
-    background-color: #0D47A1;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    color: white;
+    color: #0D47A1;;
     font-size: 0.9rem;
     padding: 0.4rem;
 }
@@ -50,7 +53,7 @@ td{
 }
 
 .reviews-table tbody tr:nth-of-type(even) {
-    background-color: #E3F2FD;
+    background-color: #eeeeee;
 }
 
 @media only screen and (max-width: 1100px){

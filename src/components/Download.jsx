@@ -1,19 +1,18 @@
-import React from 'react'
+import React from "react";
 import { CSVLink, CSVDownload } from "react-csv";
-import PropTypes from 'prop-types'
-import "./Download.css"
+import PropTypes from "prop-types";
+import "./Download.css";
 
-const Download = ({results}) => {
+const Download = ({ results }) => {
   return (
-    <div className='btn-container'>
-      <CSVLink data={results} filename={"carefinder-hospital-list.csv"}><button className='download-btn'>Download Hospital list
-        </button></CSVLink>
+    <div className="btn-container">
+      <CSVLink data={results} filename={"carefinder-hospital-list.csv"}>
+        <button className="download-btn">Download Hospital list</button>
+      </CSVLink>
     </div>
-  )
-}
+  );
+};
 
-Download.propTypes = {
+Download.propTypes = {};
 
-}
-
-export default Download
+export default Download;
