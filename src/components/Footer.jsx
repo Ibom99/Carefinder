@@ -182,7 +182,7 @@ const Footer = () => {
 
       <p className="copyright-text">
         {" "}
-        &copy; 2023 Developed by iBOM Esther<br></br>All-rights reserved.
+        &copy; 2023 Developed by iBom Esther<br></br>All-rights reserved.
       </p>
     </div>
   );
