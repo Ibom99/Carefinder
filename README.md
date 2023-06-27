@@ -8,9 +8,9 @@ This helps users make informed decisions about their hospital visit options. (Ni
 - **Hospital List Download**: Users can download their entered searched hospital list based on the enter loctation or related hospital names and save the list into a CSV file onto their device.
 - **Reviews**: Users can read and submit reviews for hospitals, to share their experiences with others.
 - **Feedback Option**: Users can submit their feedback on app experience or report dishonest information shared.
-- **User Authentication(Admin)**: Admin users can create accounts and log in to managem the reviews, user feedback support and review data analysis per day.
+- **User Authentication(Admin)**: Admin users can create accounts and log in to manage the reviews, manage user feedback support and monitor review data analysis per day.
 - **Admin Features**: Review Management, User Support Management & Review Analysis.
-- 
+
 ## Technologies Used
 
 The CareFinder app is built using the following technologies:
@@ -19,6 +19,7 @@ The CareFinder app is built using the following technologies:
 - **Database**: Firestore Database
 - **Authentication**: Firebase Authentication
 - **Data Visualization**: React Chart.js 2
+- **Markdown Functionality**: React Draft Wysiwyg Text Editor
 
 ## Installation
 
