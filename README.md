@@ -1,6 +1,6 @@
 # Carefinder
 The CareFinder app is a web application that provides a list of hospitals to users in their searched location. It provides information about the hospitals like the hospital address and the state the hospital is located.
-This helps users make informed decisions about their hospital visit options.
+This helps users make informed decisions about their hospital visit options. (Nigeria)
 
 ## Features
 
@@ -9,7 +9,7 @@ This helps users make informed decisions about their hospital visit options.
 - **Reviews**: Users can read and submit reviews for hospitals, to share their experiences with others.
 - **Feedback Option**: Users can submit their feedback on app experience or report dishonest information shared.
 - **User Authentication(Admin)**: Admin users can create accounts and log in to managem the reviews, user feedback support and review data analysis per day.
-- **Admin Features**:
+- **Admin Features**: Review Management, User Support Management & Review Analysis.
 - 
 ## Technologies Used
 
