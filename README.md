@@ -19,7 +19,7 @@ The CareFinder app is built using the following technologies:
 - **Database**: Firestore Database
 - **Authentication**: Firebase Authentication
 - **Data Visualization**: React Chart.js 2
-- **Markdown Functionality**: React Draft Wysiwyg Text Editor
+- **Markdown Functionality**: React Quill
 
 ## Installation
 
