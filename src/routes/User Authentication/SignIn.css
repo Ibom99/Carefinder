@@ -147,7 +147,7 @@ font-size: 0.8rem;
     text-align: end;
     font-size: 0.7rem;
     /* background-color: antiquewhite;  */
-width: 75%;
+width: 100%;
 padding: 0.2rem 0rem;
 margin-bottom: 0.8rem;
 } 
@@ -162,14 +162,14 @@ margin-bottom: 0.8rem;
     font-size: 0.7rem;
     
     color:#1E88E5;
-    width: 30%;
+    width: 100%;
     /* background-color: aliceblue */
 
 }
 .password-extra{
     display: flex;
     flex-direction: column;
-   align-items: end;
+   /* align-items: end; */
 }
 .show-password:hover{
     cursor: pointer;

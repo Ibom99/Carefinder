@@ -150,6 +150,9 @@ padding: 2rem;
 /* background-color: #BBDEFB;  */
  margin: 0 auto; 
 }
+.ql-editor{
+   height: 7rem; 
+}
 
 @media only screen and (max-width: 1100px){
     .reviews-list{

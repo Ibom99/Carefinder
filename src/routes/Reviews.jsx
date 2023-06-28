@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import TextAreaWithFormatting from "../components/TextAreaWithFormatting";
 import "./Reviews.css";
-import { convertToRaw } from "draft-js";
-import * as draftToHtml from "draftjs-to-html";
+// import { convertToRaw } from "draft-js";
+// import * as draftToHtml from "draftjs-to-html";
 import Button from "../components/button";
 import { v4 as uuidv4 } from "uuid";
 import { createReviewDocument } from "../firebase";
@@ -13,7 +13,7 @@ import ReviewsSearchBar from "../components/ReviewsSearchBar";
 import Footer from "../components/Footer";
 import { ROUTES } from "../utils/constants";
 import { Helmet } from "react-helmet-async";
-import { EditorState } from "draft-js";
+// import { EditorState } from "draft-js";
 
 // import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 
@@ -28,7 +28,7 @@ const Reviews = () => {
     email: "",
     number: "",
   };
-  const [markdownValue, setMarkdownValue] = useState("");
+  // const [markdownValue, setMarkdownValue] = useState("");
 
   const [editorState, setEditorState] = useState("");
   const [formData, setFormData] = useState(emptyForm);
@@ -56,17 +56,16 @@ const Reviews = () => {
     }
   };
 
-  const getMarkDown = (editorState) => {
-    setEditorState(editorState);
-    const value =
-      editorState && draftToHtml(convertToRaw(editorState.getCurrentContent()));
+  const getMarkDown = (value) => {
 
-    setMarkdownValue(value);
+
+    // setMarkdownValue(value);
     setFormData({
       ...formData,
       review: value,
     });
     console.log(value);
+    console.log('its working')
   };
   
 
@@ -80,8 +79,9 @@ const Reviews = () => {
       const res = await createReviewDocument(payload);
       if (res) {
         setFormData(emptyForm);
-        setEditorState(EditorState.createEmpty()); // Clear the editor state
-        setMarkdownValue("");
+        // setEditorState(EditorState.createEmpty()); Clear the editor state
+        // setMarkdownValue("");
+        setEditorState("")
         getReviews();
 
         // window.location.reload()
@@ -176,11 +176,12 @@ const Reviews = () => {
             />
 
             <label>Review</label>
+            
             <TextAreaWithFormatting
               name="review"
               value={formData.review}
-              onEditorStateChange={getMarkDown}
-              editorState={editorState}
+              onChange={getMarkDown}
+              placeholder="Enter your review..."
             />
           </div>
 
