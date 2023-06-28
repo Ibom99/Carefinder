@@ -1,7 +1,7 @@
 .dash-user-container{
-    width: 30vw;
+    width: 67vw;
     height: 100vh;
-    background-color:#E3F2FD;
+    /* background-color:#E3F2FD; */
     /* border: 1px solid black; */
 }
 .dash-user-content{
@@ -9,46 +9,79 @@ margin: 10px;
 background-color: white;
 padding: 2rem;
 height: 96.5%;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
 }
 .user-title{
-margin-bottom: 1rem;
+margin-bottom: 0.6rem;
 }
 
 
-.bio-grid{
+.features-grid{
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "age-tile gender-tile"
-    "blood-tile blood-tile";
+    "reviews-tile support-tile"
+    "analysis-tile analysis-tile";
     row-gap: 10px;
     column-gap: 10px;
 }
 
-.age-tile{
-    background-color: azure;
-    height: 13rem;
-    grid-area: age-tile;
+.reviews-tile{
+   background-image: url(https://res.cloudinary.com/dzzohccd8/image/upload/v1687907475/DEV%20Images/istockphoto-1248735803-612x612_cnce48.jpg);
+   background-position:top;
+   border-radius: 10px;
+    height: 35vh;
+    grid-area: reviews-tile;
 }
-.gender-tile{
-    background-color: beige;
-    grid-area: gender-tile;
+.reviews-tile h3{
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
-.blood-tile{
-    background-color: bisque;
-    grid-area: blood-tile;
+.support-tile{
+    
+    grid-area: support-tile;
+    border-radius: 10px;
+    background-image: url(https://res.cloudinary.com/dzzohccd8/image/upload/v1687908313/DEV%20Images/istockphoto-1319764442-612x612_zzkduu.jpg);
+    background-position: center;
 }
+.support-tile h3{
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.analysis-tile{
+    background-image: url(https://res.cloudinary.com/dzzohccd8/image/upload/v1687905662/DEV%20Images/istockphoto-1472597298-612x612_mwd5tm.jpg);
+    background-position: cover;
+    grid-area: analysis-tile;
+    border-radius: 10px;
+}
+.analysis-tile h3{
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
 @media only screen and (max-width: 1100px){
     .dash-user-container{
         width: 100vw;
-        /* height: 100vh; */
+        height: fit-content;
     }
     .age-tile{
         height: 5rem;
     }
     .dash-user-content{
-        height: 70%;
+        height:100%;
+    }
+    .features-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "reviews-tile"
+        "support-tile"
+        "analysis-tile";
+        row-gap: 3rem;
     }
 }

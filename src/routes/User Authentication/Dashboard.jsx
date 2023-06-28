@@ -23,7 +23,7 @@ const Dashboard = () => {
       <DashNav />
 
       <DashBio />
-      <div className="entries">Entries</div>
+      
       {/* <DashMarkup /> */}
       <div className="header-position">
         <DashHeader />

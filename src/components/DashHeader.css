@@ -38,6 +38,7 @@
         height: 5%;
         background-color: transparent;
         margin-bottom: 3rem;
+        box-shadow: none;
     }
     .header-title p{
         margin-top: 1rem;

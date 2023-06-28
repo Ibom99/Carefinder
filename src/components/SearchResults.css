@@ -14,3 +14,52 @@
 .result-address{
     color: rgb(130, 130, 130);
 }
+.hospital-top{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E3F2FD;
+    align-items: baseline;
+}
+.hospital-close-btn{
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    color: #0D47A1;
+}
+.hospital-close-btn:hover{
+    cursor: pointer;
+}
+.hospital-top h2{
+    margin-bottom: 1rem;
+}
+.modal-details{
+    margin-top: 1.5rem;
+}
+.modal-details p{
+    
+    margin-bottom: 1.5rem;
+
+}
+
+.copy-btn{
+display: flex;
+justify-content: flex-end;
+}
+.copy{
+background-color: transparent;
+border: none;
+padding: 0rem 0.5rem 0rem 0.5rem;
+font-size: 1.5rem;
+color: #0D47A1;
+}
+
+.copy:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px){
+    .hospital-top h2{
+        font-size: 1.2rem;
+    }
+}

@@ -37,6 +37,7 @@ border-radius: 5px;
     /* color: black; */
     transition: 0.4s;
     cursor: pointer;
+    color: white;
 }
 .management-route{
     text-decoration: none;
@@ -78,16 +79,16 @@ border-radius: 5px;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #BBDEFB;
-    color: black;
+    background-color: #0D47A1;
+    color: white;
     margin-bottom: 1.5rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .btn-signout:hover{
- color: white;
+ /* color: white; */
     transition: 0.4s;
     cursor: pointer;
-    background-color: #0D47A1;
+    background: linear-gradient(90deg, #0D47A1 0%, #1976D2 48%, #42A5F5 100%);
 }
 .dash-menu{
     background-color: white;
@@ -136,6 +137,7 @@ font-weight: bolder;
         width: 100vw;
         height: 3rem;
         background-color: transparent;
+        box-shadow: none;
     }
    .dash-nav{
     display: none;
