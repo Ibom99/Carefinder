@@ -13,6 +13,7 @@ import ReviewsSearchBar from "../components/ReviewsSearchBar";
 import Footer from "../components/Footer";
 import { ROUTES } from "../utils/constants";
 import { Helmet } from "react-helmet-async";
+import { BsStarFill } from "react-icons/bs";
 // import { EditorState } from "draft-js";
 
 // import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
@@ -24,7 +25,6 @@ const Reviews = () => {
     review: "",
     hospitalName: "",
     rating: "",
-    image: "",
     email: "",
     number: "",
   };
@@ -135,11 +135,15 @@ const Reviews = () => {
                     </p>
                     <p>{review.createdAt.toDate().toLocaleDateString()}</p>
                   </div>
-                  <p dangerouslySetInnerHTML={{ __html: review.review }}></p>
-                  <p>
-                    {review.rating}
+
+                  <p >
+                  {Array.from({ length: review.rating }, (_, i) => (
+            <span className="star" key={i}><BsStarFill /></span>
+          ))}
                   </p>
 
+                  <p dangerouslySetInnerHTML={{ __html: review.review }}></p>
+              
                   <p>
                     <a href={`mailto:${review.email}`}>
                       <b>{review.email}</b>
@@ -184,12 +188,14 @@ const Reviews = () => {
           </div>
 
           <div className="set-two">
-            <label>Link</label>
+            <label>Hospital Rating</label>
             <input
-              type="text"
-              name="link"
-              placeholder="Enter hospital website link..."
-              value={formData.link}
+              type="number"
+              name="rating"
+              min="1"
+              max="5"
+              placeholder="Enter rating range 1-5..."
+              value={formData.rating}
               onChange={handleChange}
               className="link-input"
             />

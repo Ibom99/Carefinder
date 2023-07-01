@@ -54,10 +54,9 @@ const Footer = () => {
     e.preventDefault();
     
     const validationErrors = Validation(email, "", feedback);
-    if (!validationErrors) {
+    if (!validationErrors) {  //the exclamtion mark affects the code and document creation it sets
       setErrors(validationErrors);
     } else {
-
       handleSend();
       
     }
