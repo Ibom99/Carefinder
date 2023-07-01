@@ -43,15 +43,15 @@ const SignUp = () => {
         setLoading(false);
       });
   };
-  const handleValidation = (e) => {
-    e.preventDefault();
-    const validationErrors = Validation(email, password, "", username);
-    if (validationErrors) {
-      setErrors(validationErrors);
-    } else {
-      handleSend();
-    }
-  };
+  // const handleValidation = (e) => {
+  //   e.preventDefault();
+  //   const validationErrors = Validation(email, password, "", username);
+  //   if (validationErrors) {
+  //     setErrors(validationErrors);
+  //   } else {
+  //     signUp();
+  //   }
+  // };
 
   useEffect(() => {
     if (email || password || username) setErrors({});
@@ -79,7 +79,7 @@ const SignUp = () => {
           </div>
         </div>
         <div className="signup-form">
-          <form onSubmit={handleValidation}>
+          <form onSubmit={signUp}>
             <h1 className="carefinder-logo">
               <Link className="carefinder-link" to={ROUTES.LANDING}>
                 Carefinder

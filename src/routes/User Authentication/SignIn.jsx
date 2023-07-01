@@ -38,15 +38,15 @@ const SignIn = () => {
         setLoading(false);
       });
   };
-  const handleValidation = (e) => {
-    e.preventDefault();
-    const validationErrors = Validation(email, password);
-    if (validationErrors) {
-      setErrors(validationErrors);
-    } else {
-      signIn();
-    }
-  };
+  // const handleValidation = (e) => {
+  //   e.preventDefault();
+  //   const validationErrors = Validation(email, password);
+  //   if (validationErrors) {
+  //     setErrors(validationErrors);
+  //   } else {
+  //     signIn();
+  //   }
+  // };
 
   const signInWithGooglePopup = () => {
     signInWithGoogle()
@@ -97,7 +97,7 @@ const SignIn = () => {
           </div>
         </div>
         <div className="signin-form">
-          <form onSubmit={handleValidation}>
+          <form onSubmit={signIn}>
             <h1 className="carefinder-logo">
               <Link className="carefinder-link" to={ROUTES.LANDING}>
                 Carefinder
