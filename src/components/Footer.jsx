@@ -7,7 +7,7 @@ import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useState } from "react";
 import { Validation } from "../utils/Validation";
-import Button from "./button";
+
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -21,6 +21,7 @@ const Footer = () => {
 
   const handleFeedbackChange = (e) => {
     setFeedback(e.target.value);
+    // console.log(e.target.value)
   };
 
   // const handleChange = (e)=> {
@@ -28,17 +29,7 @@ const Footer = () => {
   //   setFormData({...formData, [name]: value})
   // }
 
-  const handleValidation = (e) => {
-    e.preventDefault();
-    const validationErrors = Validation(email, "", feedback);
-    if (validationErrors) {
-      setErrors(validationErrors);
-    } else {
-      handleSend();
-    }
-  };
-
-  const handleSend = async (e) => {
+  const handleSend = async () => {
     // e.preventDefault();
     try {
       const payload = {
@@ -51,14 +42,28 @@ const Footer = () => {
       await addDoc(collection(db, "supports"), payload);
       setEmail("");
       setFeedback("");
-      // setErrors({});
-      // handleValidation()
+  
       console.log("Feedback sent successfully!");
       setFeedbackSent(true);
     } catch (error) {
       console.error("Error sending feedback: ", error);
     }
   };
+
+  const handleValidation = (e) => {
+    e.preventDefault();
+    
+    const validationErrors = Validation(email, "", feedback);
+    if (!validationErrors) {
+      setErrors(validationErrors);
+    } else {
+
+      handleSend();
+      
+    }
+  };
+
+  
   const handleInputFocus = () => {
     setFeedbackSent(false);
   };
@@ -89,31 +94,31 @@ const Footer = () => {
           </p>
           <p>
             <Link className="footer-link" to={ROUTES.BMI}>
-              {" "}
+             
               BMI Calculator
             </Link>
           </p>
           <p>
             <Link className="footer-link" to={ROUTES.ABOUT}>
-              {" "}
+              
               About Us
             </Link>
           </p>
           <p>
             <Link className="footer-link" to={ROUTES.FAQ}>
-              {" "}
+             
               FAQs
             </Link>
           </p>
           <p>
             <Link className="footer-link" to={ROUTES.SIGN_IN}>
-              {" "}
+              
               Sign in
             </Link>
           </p>
           <p>
             <Link className="footer-link" to={ROUTES.SIGN_UP}>
-              {" "}
+            
               Sign up
             </Link>
           </p>
@@ -181,7 +186,6 @@ const Footer = () => {
       </div>
 
       <p className="copyright-text">
-        {" "}
         &copy; 2023 Developed by iBom Esther<br></br>All-rights reserved.
       </p>
     </div>

@@ -51,6 +51,9 @@ td{
 .reviews-table{
     width: 100%;
 }
+tbody img{
+    width: 40%;
+}
 
 .reviews-table tbody tr:nth-of-type(even) {
     background-color: #eeeeee;

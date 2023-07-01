@@ -23,7 +23,7 @@ const Reviews = () => {
   const emptyForm = {
     review: "",
     hospitalName: "",
-    link: "",
+    rating: "",
     image: "",
     email: "",
     number: "",
@@ -137,9 +137,7 @@ const Reviews = () => {
                   </div>
                   <p dangerouslySetInnerHTML={{ __html: review.review }}></p>
                   <p>
-                    <a href={review.link} target="_blank">
-                      {review.link}
-                    </a>
+                    {review.rating}
                   </p>
 
                   <p>
