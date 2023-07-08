@@ -53,7 +53,8 @@ const NavBar = () => {
           </Link>
         </ul>
       </div>
-
+      
+{/* desktop view navigation bar */}
       <div className="nav-container">
         <div className="logo">
           <Link to={ROUTES.LANDING} className="home-link">
